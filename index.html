@@ -310,14 +310,50 @@
         position: relative;
         flex-shrink: 0;
       }
-      .hero-photo img {
+      .hero-slideshow {
+        position: relative;
         width: clamp(200px, 20vw, 280px);
+      }
+      .hero-slideshow .hs-slide {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 0.8s ease;
+        pointer-events: none;
+      }
+      .hero-slideshow .hs-slide.active {
+        position: relative;
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .hero-slideshow .hs-slide img {
+        width: 100%;
         border-radius: var(--r-lg);
         object-fit: cover;
         aspect-ratio: 3/4;
         display: block;
         border: 1px solid var(--border);
         box-shadow: 0 16px 48px rgba(0, 0, 0, 0.07);
+      }
+      .slide-dots {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 10px;
+      }
+      .slide-dot {
+        width: 7px; height: 7px;
+        border-radius: 50%;
+        background: var(--border);
+        cursor: pointer;
+        transition: background 0.25s, transform 0.25s;
+        border: none;
+        padding: 0;
+      }
+      .slide-dot.active {
+        background: var(--indigo);
+        transform: scale(1.35);
       }
       .float-card {
         position: absolute;
@@ -368,15 +404,27 @@
         align-items: center;
         margin-top: 2.5rem;
       }
-      .about-img {
+      .about-photos {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 0.6rem;
+        align-items: start;
+      }
+      .about-photos img {
         width: 100%;
-        max-width: 300px;
         border-radius: var(--r-lg);
         object-fit: cover;
-        aspect-ratio: 3/4;
         border: 1px solid var(--border);
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.07);
+        box-shadow: 0 10px 32px rgba(0, 0, 0, 0.08);
         display: block;
+      }
+      .about-photos img:first-child {
+        aspect-ratio: 3/4;
+      }
+      .about-photos img:last-child {
+        aspect-ratio: 1/1;
+        margin-top: 2.5rem;
+        border-radius: var(--r);
       }
       .about-title {
         font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
@@ -986,10 +1034,22 @@
           </div>
         </div>
         <div class="hero-photo reveal" style="transition-delay: 0.12s">
-          <img
-            src="./asset/img/20260421_034717396_iOS.jpg"
-            alt="Krissanachai Sararam"
-          />
+          <div class="hero-slideshow" id="heroSlideshow">
+            <div class="hs-slide active">
+              <img src="./asset/img/20260421_034717396_iOS.jpg" alt="Krissanachai Sararam" />
+            </div>
+            <div class="hs-slide">
+              <img src="./asset/img/20260421_034717392_iOS.jpg" alt="Krissanachai Sararam" />
+            </div>
+            <div class="hs-slide">
+              <img src="./asset/img/20260421_034717388_iOS.jpg" alt="Krissanachai Sararam" />
+            </div>
+          </div>
+          <div class="slide-dots" id="slideDots">
+            <button class="slide-dot active" aria-label="Photo 1"></button>
+            <button class="slide-dot" aria-label="Photo 2"></button>
+            <button class="slide-dot" aria-label="Photo 3"></button>
+          </div>
           <div class="float-card">
             <div class="fc-icon"><i class="bi bi-building"></i></div>
             <div>
@@ -1007,11 +1067,10 @@
         <div class="eyebrow">About me</div>
         <div class="about-grid">
           <div class="reveal">
-            <img
-              class="about-img"
-              src="./asset/img/20260421_034717396_iOS.jpg"
-              alt="Krissanachai Sararam"
-            />
+            <div class="about-photos">
+              <img src="./asset/img/20260421_034717392_iOS.jpg" alt="Krissanachai Sararam" />
+              <img src="./asset/img/20260421_034717388_iOS.jpg" alt="Krissanachai Sararam" />
+            </div>
           </div>
           <div class="reveal" style="transition-delay: 0.1s">
             <h2 class="about-title">
@@ -1520,6 +1579,23 @@
         { threshold: 0.1 },
       );
       document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      // Hero slideshow
+      (function () {
+        const slides = document.querySelectorAll('#heroSlideshow .hs-slide');
+        const dots = document.querySelectorAll('#slideDots .slide-dot');
+        let cur = 0;
+        function goTo(n) {
+          slides[cur].classList.remove('active');
+          dots[cur].classList.remove('active');
+          cur = n;
+          slides[cur].classList.add('active');
+          dots[cur].classList.add('active');
+        }
+        dots.forEach((d, i) => d.addEventListener('click', () => { goTo(i); clearInterval(timer); timer = setInterval(next, 3500); }));
+        function next() { goTo((cur + 1) % slides.length); }
+        let timer = setInterval(next, 3500);
+      })();
 
       // Contact form — mailto fallback
       function handleForm(e) {
