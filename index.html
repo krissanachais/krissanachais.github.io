@@ -14,8 +14,14 @@
       type="image/jpeg"
     />
     <meta property="og:title" content="Krissanachai Sararam — Portfolio" />
-    <meta property="og:description" content="นักวิชาการคอมพิวเตอร์ปฏิบัติการ สำนักงานสถิติแห่งชาติ" />
-    <meta property="og:image" content="./asset/img/ChatGPT%20Image%20Apr%2023%2C%202026%2C%2008_43_20%20AM.png" />
+    <meta
+      property="og:description"
+      content="นักวิชาการคอมพิวเตอร์ปฏิบัติการ สำนักงานสถิติแห่งชาติ"
+    />
+    <meta
+      property="og:image"
+      content="./asset/img/ChatGPT%20Image%20Apr%2023%2C%202026%2C%2008_43_20%20AM.png"
+    />
     <meta property="og:type" content="website" />
 
     <!-- Fonts -->
@@ -316,7 +322,8 @@
       }
       .hero-slideshow .hs-slide {
         position: absolute;
-        top: 0; left: 0;
+        top: 0;
+        left: 0;
         width: 100%;
         opacity: 0;
         transition: opacity 0.8s ease;
@@ -331,6 +338,7 @@
         width: 100%;
         border-radius: var(--r-lg);
         object-fit: cover;
+        object-position: top center;
         aspect-ratio: 3/4;
         display: block;
         border: 1px solid var(--border);
@@ -343,11 +351,14 @@
         margin-top: 10px;
       }
       .slide-dot {
-        width: 7px; height: 7px;
+        width: 7px;
+        height: 7px;
         border-radius: 50%;
         background: var(--border);
         cursor: pointer;
-        transition: background 0.25s, transform 0.25s;
+        transition:
+          background 0.25s,
+          transform 0.25s;
         border: none;
         padding: 0;
       }
@@ -414,6 +425,7 @@
         width: 100%;
         border-radius: var(--r-lg);
         object-fit: cover;
+        object-position: top center;
         border: 1px solid var(--border);
         box-shadow: 0 10px 32px rgba(0, 0, 0, 0.08);
         display: block;
@@ -1036,13 +1048,22 @@
         <div class="hero-photo reveal" style="transition-delay: 0.12s">
           <div class="hero-slideshow" id="heroSlideshow">
             <div class="hs-slide active">
-              <img src="./asset/img/20260421_034717396_iOS.jpg" alt="Krissanachai Sararam" />
+              <img
+                src="./asset/img/20260421_034717396_iOS.jpg"
+                alt="Krissanachai Sararam"
+              />
             </div>
             <div class="hs-slide">
-              <img src="./asset/img/20260421_034717392_iOS.jpg" alt="Krissanachai Sararam" />
+              <img
+                src="./asset/img/20260421_034717392_iOS.jpg"
+                alt="Krissanachai Sararam"
+              />
             </div>
             <div class="hs-slide">
-              <img src="./asset/img/20260421_034717388_iOS.jpg" alt="Krissanachai Sararam" />
+              <img
+                src="./asset/img/20260421_034717388_iOS.jpg"
+                alt="Krissanachai Sararam"
+              />
             </div>
           </div>
           <div class="slide-dots" id="slideDots">
@@ -1067,9 +1088,15 @@
         <div class="eyebrow">About me</div>
         <div class="about-grid">
           <div class="reveal">
-            <div class="about-photos">
-              <img src="./asset/img/20260421_034717392_iOS.jpg" alt="Krissanachai Sararam" />
-              <img src="./asset/img/20260421_034717388_iOS.jpg" alt="Krissanachai Sararam" />
+            <div class="about-photos " style="transition-delay: 0.05s">
+              <img
+                src="./asset/img/20260421_034717392_iOS.jpg"
+                alt="Krissanachai Sararam"
+              />
+              <img
+                src="./asset/img/20240508_remini_iOSx300.png"
+                alt="Krissanachai Sararam"
+              />
             </div>
           </div>
           <div class="reveal" style="transition-delay: 0.1s">
@@ -1105,11 +1132,16 @@
             </div>
           </div>
         </div>
-        <div class="reveal" style="margin-top:2rem">
+        <div class="reveal" style="margin-top: 2rem">
           <img
             src="./asset/img/ChatGPT%20Image%20Apr%2023%2C%202026%2C%2008_43_20%20AM.png"
             alt="Krissanachai Sararam — NSO Banner"
-            style="width:100%;border-radius:1.25rem;display:block;box-shadow:0 8px 32px rgba(0,0,0,0.10);"
+            style="
+              width: 100%;
+              border-radius: 1.25rem;
+              display: block;
+              box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            "
           />
         </div>
       </div>
@@ -1396,9 +1428,7 @@
             <div class="exp-period">2566 - 2567</div>
             <div>
               <div class="exp-role">นักวิชาการคอมพิวเตอร์ปฏิบัติการ</div>
-              <div class="exp-org">
-                กรมประมง · กระทรวงเกษตรและสหกรณ์
-              </div>
+              <div class="exp-org">กรมประมง · กระทรวงเกษตรและสหกรณ์</div>
               <div class="exp-desc">
                 ดูแลและพัฒนาระบบสารสนเทศ พัฒนาเว็บแอปพลิเคชันเพื่อเผยแพร่ข้อมูล
               </div>
@@ -1411,11 +1441,11 @@
             <div>
               <div class="exp-role">นักวิชาการคอมพิวเตอร์</div>
               <div class="exp-org">
-                กองทุนพัฒนาดิจิทัลเพื่อเศรษฐกิจและสังคม · สำนักงานคณะกรรมการดิจิทัลเพื่อเศรษฐกิจและสังคมแห่งชาติ · กระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม
+                กองทุนพัฒนาดิจิทัลเพื่อเศรษฐกิจและสังคม ·
+                สำนักงานคณะกรรมการดิจิทัลเพื่อเศรษฐกิจและสังคมแห่งชาติ ·
+                กระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม
               </div>
-              <div class="exp-desc">
-                ดูแลและพัฒนาระบบสารสนเทศ
-              </div>
+              <div class="exp-desc">ดูแลและพัฒนาระบบสารสนเทศ</div>
             </div>
           </div>
         </div>
@@ -1582,18 +1612,26 @@
 
       // Hero slideshow
       (function () {
-        const slides = document.querySelectorAll('#heroSlideshow .hs-slide');
-        const dots = document.querySelectorAll('#slideDots .slide-dot');
+        const slides = document.querySelectorAll("#heroSlideshow .hs-slide");
+        const dots = document.querySelectorAll("#slideDots .slide-dot");
         let cur = 0;
         function goTo(n) {
-          slides[cur].classList.remove('active');
-          dots[cur].classList.remove('active');
+          slides[cur].classList.remove("active");
+          dots[cur].classList.remove("active");
           cur = n;
-          slides[cur].classList.add('active');
-          dots[cur].classList.add('active');
+          slides[cur].classList.add("active");
+          dots[cur].classList.add("active");
         }
-        dots.forEach((d, i) => d.addEventListener('click', () => { goTo(i); clearInterval(timer); timer = setInterval(next, 3500); }));
-        function next() { goTo((cur + 1) % slides.length); }
+        dots.forEach((d, i) =>
+          d.addEventListener("click", () => {
+            goTo(i);
+            clearInterval(timer);
+            timer = setInterval(next, 3500);
+          }),
+        );
+        function next() {
+          goTo((cur + 1) % slides.length);
+        }
         let timer = setInterval(next, 3500);
       })();
 
