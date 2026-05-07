@@ -449,6 +449,17 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
       }
+      .skill-group-label {
+        margin: 0.2rem 0 0.9rem;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--light);
+      }
+      .skills-grid.secondary {
+        margin-top: 0.45rem;
+      }
       .sc {
         background: var(--white);
         border: 1.5px solid var(--border);
@@ -463,6 +474,13 @@
         border-color: var(--indigo);
         transform: translateY(-4px);
         box-shadow: 0 12px 36px rgba(108, 99, 255, 0.1);
+      }
+      .sc.primary {
+        border-color: #cfc9ff;
+        box-shadow: 0 6px 20px rgba(108, 99, 255, 0.08);
+      }
+      .sc.gov {
+        background: linear-gradient(180deg, #f5f8ff 0%, #ffffff 100%);
       }
       .sc-icon {
         width: 44px;
@@ -525,6 +543,72 @@
         background: var(--bg);
         border: 1px solid var(--border);
         color: var(--light);
+      }
+
+      /* ── GIT WORK ── */
+      #git-work {
+        background: var(--white);
+      }
+      .git-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      .git-card {
+        background: var(--white);
+        border: 1.5px solid var(--border);
+        border-radius: var(--r);
+        padding: 1.5rem;
+        transition:
+          border-color 0.22s,
+          transform 0.22s,
+          box-shadow 0.22s;
+      }
+      .git-card:hover {
+        border-color: var(--indigo);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 36px rgba(108, 99, 255, 0.1);
+      }
+      .git-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.8rem;
+      }
+      .git-name {
+        font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--dark);
+      }
+      .git-link {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        background: var(--bg);
+        color: var(--mid);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+      }
+      .git-link:hover {
+        color: var(--indigo);
+        border-color: var(--indigo);
+        background: var(--indigo-lt);
+      }
+      .git-desc {
+        font-size: 0.78rem;
+        color: var(--mid);
+        line-height: 1.7;
+        margin-bottom: 0.85rem;
+      }
+      .git-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
       }
 
       /* ── EXPERIENCE ── */
@@ -797,6 +881,9 @@
         .skills-grid {
           grid-template-columns: 1fr 1fr;
         }
+        .git-grid {
+          grid-template-columns: 1fr 1fr;
+        }
         .exp-row {
           grid-template-columns: 1fr;
           gap: 0.25rem;
@@ -824,6 +911,9 @@
         .skills-grid {
           grid-template-columns: 1fr;
         }
+        .git-grid {
+          grid-template-columns: 1fr;
+        }
         .hero-btns {
           flex-direction: column;
           align-items: flex-start;
@@ -844,6 +934,7 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#git-work">Git Work</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -857,6 +948,7 @@
     <div class="mobile-nav" id="mobileNav">
       <a href="#about" onclick="closeMob()">About</a>
       <a href="#skills" onclick="closeMob()">Skills</a>
+      <a href="#git-work" onclick="closeMob()">Git Work</a>
       <a href="#experience" onclick="closeMob()">Experience</a>
       <a href="#contact" onclick="closeMob()">Contact</a>
     </div>
@@ -975,99 +1067,229 @@
             เทคโนโลยีที่ใช้งานจริง<br />ในการทำงานทุกวัน
           </p>
         </div>
+        <div class="skill-group-label">Primary Skills</div>
         <div class="skills-grid">
-          <div class="sc reveal">
+          <div class="sc primary reveal">
             <div class="sc-icon ico-indigo">
-              <i class="bi bi-filetype-py"></i>
+              <i class="bi bi-filetype-tsx"></i>
             </div>
-            <div class="sc-name">Python</div>
+            <div class="sc-name">TypeScript · Next.js · Node.js</div>
             <div class="sc-desc">
-              เขียน script อัตโนมัติ วิเคราะห์ข้อมูล และ security analysis ด้วย
-              CodeQL
+              พัฒนาแอปภายในจาก private repos เช่น NSO-Timeout_telegram,
+              NSO_zoom-booking-service, NSO-Survey-nextjs และ mdes-hrms
             </div>
             <div class="sc-tags">
-              <span class="tag">pandas</span><span class="tag">matplotlib</span
-              ><span class="tag">automation</span
-              ><span class="tag">CodeQL</span>
+              <span class="tag">TypeScript</span><span class="tag">Next.js</span
+              ><span class="tag">Node.js</span><span class="tag">npm</span>
+            </div>
+          </div>
+
+          <div class="sc primary reveal" style="transition-delay: 0.06s">
+            <div class="sc-icon ico-green">
+              <i class="bi bi-filetype-php"></i>
+            </div>
+            <div class="sc-name">PHP · Laravel · Blade</div>
+            <div class="sc-desc">
+              มีประสบการณ์จาก private repos สาย PHP เช่น NSO-ShortURL,
+              NSO-infoserver, NSO-anniversary และ laravel
+            </div>
+            <div class="sc-tags">
+              <span class="tag">PHP</span><span class="tag">Laravel</span
+              ><span class="tag">Blade</span><span class="tag">MVC</span>
+            </div>
+          </div>
+
+          <div class="sc primary gov reveal" style="transition-delay: 0.12s">
+            <div class="sc-icon ico-blue">
+              <i class="bi bi-diagram-3-fill"></i>
+            </div>
+            <div class="sc-name">Government Systems</div>
+            <div class="sc-desc">
+              ออกแบบและพัฒนาระบบงานภาครัฐสำหรับ NSO เช่น CRM, Booking,
+              Survey, HRMS และระบบแจ้งเตือนภายในหน่วยงาน
+            </div>
+            <div class="sc-tags">
+              <span class="tag">e-Government</span><span class="tag">NSO Workflow</span
+              ><span class="tag">Internal Apps</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group-label" style="margin-top: 1.3rem">Secondary Skills</div>
+        <div class="skills-grid secondary">
+          <div class="sc reveal">
+            <div class="sc-icon ico-teal">
+              <i class="bi bi-chat-dots-fill"></i>
+            </div>
+            <div class="sc-name">API Integration · Bot Platform</div>
+            <div class="sc-desc">
+              เชื่อมต่อบริการ LINE, Telegram และ Discord จากงานจริง เช่น
+              NSO-Line_API, NSO-Timeout_telegram และ discordjs
+            </div>
+            <div class="sc-tags">
+              <span class="tag">LINE API</span><span class="tag">Telegram Bot</span
+              ><span class="tag">Discord.js</span>
             </div>
           </div>
 
           <div class="sc reveal" style="transition-delay: 0.06s">
-            <div class="sc-icon ico-green">
-              <i class="bi bi-code-slash"></i>
+            <div class="sc-icon ico-blue">
+              <i class="bi bi-kanban"></i>
             </div>
-            <div class="sc-name">HTML · CSS · JavaScript</div>
+            <div class="sc-name">Business Systems Development</div>
             <div class="sc-desc">
-              พัฒนาเว็บแอปพลิเคชัน Frontend ตั้งแต่ UI design จนถึง interactive
-              logic
+              พัฒนาระบบงานภายในองค์กร เช่น CRM, Booking, Survey, Repair,
+              Timeout และ HRMS workflow
             </div>
             <div class="sc-tags">
-              <span class="tag">HTML5</span><span class="tag">CSS3</span
-              ><span class="tag">Vanilla JS</span
-              ><span class="tag">Responsive</span>
+              <span class="tag">CRM</span><span class="tag">Booking</span
+              ><span class="tag">Survey</span><span class="tag">HRMS</span>
             </div>
           </div>
 
           <div class="sc reveal" style="transition-delay: 0.12s">
-            <div class="sc-icon ico-teal">
-              <i class="bi bi-chat-dots-fill"></i>
+            <div class="sc-icon ico-yellow">
+              <i class="bi bi-database-fill"></i>
             </div>
-            <div class="sc-name">LINE API · LIFF</div>
+            <div class="sc-name">SQL · Data Processing</div>
             <div class="sc-desc">
-              พัฒนา LINE Bot และ LIFF v2 application เชื่อมต่อบริการกับ LINE
-              platform
+              ดูแลการจัดการข้อมูลและ query optimization รวมถึงงานค้นหาแบบ
+              wildcard และงานฐานข้อมูลเชิงระบบ
             </div>
             <div class="sc-tags">
-              <span class="tag">LIFF v2</span
-              ><span class="tag">Messaging API</span
-              ><span class="tag">LINE OA</span>
+              <span class="tag">SQL</span><span class="tag">MySQL</span
+              ><span class="tag">Optimization</span>
             </div>
           </div>
 
           <div class="sc reveal" style="transition-delay: 0.18s">
-            <div class="sc-icon ico-blue">
-              <i class="bi bi-database-fill"></i>
-            </div>
-            <div class="sc-name">SQL · Database</div>
-            <div class="sc-desc">
-              จัดการฐานข้อมูล เขียน query ซับซ้อน และออกแบบโครงสร้าง database
-            </div>
-            <div class="sc-tags">
-              <span class="tag">SQL</span><span class="tag">MySQL</span
-              ><span class="tag">Data Modeling</span>
-            </div>
-          </div>
-
-          <div class="sc reveal" style="transition-delay: 0.24s">
-            <div class="sc-icon ico-yellow">
-              <i class="bi bi-bar-chart-fill"></i>
-            </div>
-            <div class="sc-name">Data Analysis</div>
-            <div class="sc-desc">
-              วิเคราะห์ข้อมูลสถิติ สร้าง dashboard
-              และรายงานเพื่อสนับสนุนการตัดสินใจ
-            </div>
-            <div class="sc-tags">
-              <span class="tag">Statistics</span
-              ><span class="tag">Visualization</span
-              ><span class="tag">NSO Data</span>
-            </div>
-          </div>
-
-          <div class="sc reveal" style="transition-delay: 0.3s">
             <div class="sc-icon ico-pink">
               <i class="bi bi-shield-check"></i>
             </div>
-            <div class="sc-name">Security · CodeQL</div>
+            <div class="sc-name">Security · CodeQL · CI/CD</div>
             <div class="sc-desc">
-              วิเคราะห์ความปลอดภัยของโค้ด (SAST) ด้วย CodeQL และ GitHub Advanced
-              Security
+              ใช้ CodeQL และ GitHub Actions เพื่อยกระดับคุณภาพโค้ด
+              และ security workflow ในการพัฒนา
             </div>
             <div class="sc-tags">
               <span class="tag">CodeQL</span><span class="tag">SAST</span
-              ><span class="tag">GitHub Security</span>
+              ><span class="tag">GitHub Actions</span>
+              <span class="tag">CI/CD</span>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GIT WORK -->
+    <section id="git-work" class="section">
+      <div class="inner">
+        <div class="skills-head">
+          <div>
+            <div class="eyebrow">Git Projects</div>
+            <h2 class="big-title">
+              งานอื่นของฉัน<br /><span class="accent">บน GitHub</span>
+            </h2>
+          </div>
+          <p
+            style="
+              font-size: 0.84rem;
+              color: var(--light);
+              max-width: 260px;
+              text-align: right;
+              line-height: 1.75;
+            "
+          >
+            รวมโปรเจกต์ที่ active ล่าสุด<br />ทั้ง public และ private
+          </p>
+        </div>
+
+        <div class="git-grid">
+          <article class="git-card reveal">
+            <div class="git-top">
+              <h3 class="git-name">krissanachais.github.io</h3>
+              <a
+                class="git-link"
+                href="https://github.com/krissanachais/krissanachais.github.io"
+                target="_blank"
+                rel="noopener"
+                aria-label="Open repository"
+                ><i class="bi bi-box-arrow-up-right"></i
+              ></a>
+            </div>
+            <p class="git-desc">
+              โปรเจกต์เว็บไซต์โปรไฟล์ส่วนตัวที่โฮสต์ด้วย GitHub Pages และพัฒนา
+              UI/UX ด้วย HTML, CSS และ JavaScript
+            </p>
+            <div class="git-meta">
+              <span class="tag">HTML</span>
+              <span class="tag">Portfolio</span>
+              <span class="tag">GitHub Pages</span>
+            </div>
+          </article>
+
+          <article class="git-card reveal" style="transition-delay: 0.07s">
+            <div class="git-top">
+              <h3 class="git-name">line-liff-v2-starter</h3>
+              <a
+                class="git-link"
+                href="https://github.com/krissanachais/line-liff-v2-starter"
+                target="_blank"
+                rel="noopener"
+                aria-label="Open repository"
+                ><i class="bi bi-box-arrow-up-right"></i
+              ></a>
+            </div>
+            <p class="git-desc">
+              Starter template สำหรับสร้าง LINE LIFF v2 app และเชื่อมต่อบริการ
+              LINE Messaging API อย่างรวดเร็ว
+            </p>
+            <div class="git-meta">
+              <span class="tag">CSS</span>
+              <span class="tag">LIFF v2</span>
+              <span class="tag">LINE API</span>
+            </div>
+          </article>
+
+          <article class="git-card reveal" style="transition-delay: 0.14s">
+            <div class="git-top">
+              <h3 class="git-name">intro</h3>
+              <a
+                class="git-link"
+                href="https://github.com/krissanachais/intro"
+                target="_blank"
+                rel="noopener"
+                aria-label="Open repository"
+                ><i class="bi bi-box-arrow-up-right"></i
+              ></a>
+            </div>
+            <p class="git-desc">
+              โปรเจกต์ฝึกใช้งาน GitHub Skills สำหรับ Introduction to CodeQL เน้น
+              Python และแนวคิดด้าน security analysis
+            </p>
+            <div class="git-meta">
+              <span class="tag">Python</span>
+              <span class="tag">CodeQL</span>
+              <span class="tag">Security</span>
+            </div>
+          </article>
+
+          <article class="git-card reveal" style="transition-delay: 0.21s">
+            <div class="git-top">
+              <h3 class="git-name">Private NSO Projects</h3>
+            </div>
+            <p class="git-desc">
+              งาน private ที่พัฒนาจริงภายในองค์กร เช่น NSO-Timeout_telegram,
+              NSO_zoom-booking-service, NSO-CRM, NSO-repair, NSO-Survey-nextjs,
+              NSO-Line_API, NSO-ShortURL และ mdes-idp_form
+            </p>
+            <div class="git-meta">
+              <span class="tag">TypeScript</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">PHP / Blade</span>
+              <span class="tag">Internal Systems</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
