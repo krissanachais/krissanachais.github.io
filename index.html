@@ -1,140 +1,1303 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Krissanachai S. | Portfolio</title>
+    <title>Krissanachai Sararam — Portfolio</title>
     <meta
       name="description"
-      content="Portfolio of Krissanachai Sararam, a Computer Scientist at the National Statistical Office of Thailand."
-    />
-    <meta name="author" content="Krissanachai Sararam" />
-    <meta
-      name="keywords"
-      content="Krissanachai Sararam, Portfolio, Computer Scientist, National Statistical Office, Thailand"
+      content="Portfolio ของ Krissanachai Sararam นักวิชาการคอมพิวเตอร์ปฏิบัติการ สำนักงานสถิติแห่งชาติ"
     />
     <link
       rel="icon"
       href="./asset/img/20240508_remini_iOSx300.png"
-      type="image/x-icon"
+      type="image/png"
     />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="apple-touch-icon"
-      href="./asset/img/20240508_remini_iOSx300.png"
-    />
-    <!-- Bootstrap 5 CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap"
+      href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap"
       rel="stylesheet"
     />
-  </head>
-  <body
-    class="bg-body-tertiary"
-    style="font-family: 'Prompt', sans-serif; min-height: 100vh"
-  >
-    <div
-      class="container py-5 d-flex flex-column align-items-center justify-content-center min-vh-100"
-    >
-      <div
-        class="card border-0 shadow-lg p-4 text-center"
-        style="
-          display: inline-block;
-          background: rgba(255, 255, 255, 0.85);
-          backdrop-filter: blur(8px);
-          border-radius: 2rem;
-          min-width: 0;
-          max-width: 100vw;
-        "
-      >
-        <div class="mb-3">
-          <img
-            src="./asset/img/20240508_remini_iOSx300.png"
-            alt="Profile Picture"
-            class="img-fluid rounded-circle border border-4 border-white shadow"
-            style="width: 140px; height: 140px; object-fit: cover"
-          />
-        </div>
-        <h1
-          class="fw-bold mb-1 gradient-text display-5"
-          style="white-space: nowrap"
-        >
-          Krissanachai Sararam
-        </h1>
-        <h2 class="h5 text-secondary mb-2">กฤษณชัย สาระรัมย์</h2>
-        <h4 class="h6 text-secondary mb-2">นักวิชาการคอมพิวเตอร์ปฏิบัติการ</h4>
-        <div class="mb-3 text-primary small">
-          สำนักงานสถิติแห่งชาติ<br />
-          กระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม
-        </div>
-        <div class="d-flex justify-content-center gap-2 mb-2">
-          <a
-            href="mailto:krissanachai.s@nso.mail.go.th"
-            class="btn btn-outline-primary rounded-circle d-flex align-items-center justify-content-center"
-            style="width: 48px; height: 48px"
-            title="Email"
-          >
-            <i class="bi bi-envelope-fill fs-4"></i>
-          </a>
-          <a
-            href="https://github.com/krissanachais"
-            target="_blank"
-            class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center"
-            style="width: 48px; height: 48px"
-            title="GitHub"
-          >
-            <i class="bi bi-github fs-4"></i> </a
-          >
-          <a
-            href="https://t.me/krissanachai16"
-            target="_blank"
-            class="btn btn-info rounded-circle d-flex align-items-center justify-content-center"
-            style="width: 48px; height: 48px"
-            title="Telegram"
-          >
-            <i class="bi bi-telegram fs-4"></i>
-          </a>
-          <!-- <a
-            href="https://facebook.com/yourprofile"
-            target="_blank"
-            class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center"
-            style="width: 48px; height: 48px"
-            title="Facebook"
-          >
-            <i class="bi bi-facebook fs-4"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/yourprofile"
-            target="_blank"
-            class="btn btn-secondary rounded-circle d-flex align-items-center justify-content-center"
-            style="width: 48px; height: 48px"
-            title="LinkedIn"
-          >
-            <i class="bi bi-linkedin fs-4"></i>
-          </a> -->
-        </div>
-        <!-- <div class="text-muted small mt-2">krissanachai.s@nso.mail.go.th</div> -->
-      </div>
-    </div>
-    <style>
-      body {
-        background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
-        min-height: 100vh;
-      }
-      .gradient-text {
-        background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-    </style>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --white: #ffffff;
+        --bg: #f7f7f7;
+        --dark: #1d1d1d;
+        --mid: #555555;
+        --light: #888888;
+        --border: #e3e3e3;
+        --indigo: #6c63ff;
+        --indigo-lt: #eeeeff;
+        --green-lt: #efffea;
+        --pink-lt: #fde4f9;
+        --blue-lt: #e3f2ff;
+        --yellow-lt: #fffbe0;
+        --peach-lt: #ffeeeb;
+        --teal-lt: #e0f7f7;
+        --r-sm: 10px;
+        --r: 18px;
+        --r-lg: 26px;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family:
+          "Noto Sans Thai",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        background: var(--white);
+        color: var(--dark);
+        -webkit-font-smoothing: antialiased;
+        font-size: 15px;
+        line-height: 1.72;
+      }
+
+      /* ── NAV ── */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border-bottom: 1px solid var(--border);
+        padding: 0 6vw;
+        height: 66px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav-logo {
+        font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
+        font-weight: 800;
+        font-size: 1rem;
+        color: var(--dark);
+        text-decoration: none;
+        letter-spacing: -0.02em;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+      }
+      .nav-links a {
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--light);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--dark);
+      }
+      .nav-cta {
+        font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
+        font-size: 0.78rem;
+        font-weight: 700;
+        padding: 0.48rem 1.2rem;
+        border-radius: 999px;
+        background: var(--dark);
+        color: #fff;
+        text-decoration: none;
+        transition:
+          opacity 0.2s,
+          transform 0.18s;
+      }
+      .nav-cta:hover {
+        opacity: 0.8;
+        transform: translateY(-1px);
+      }
+      .nav-ham {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--dark);
+        font-size: 1.35rem;
+        padding: 0.2rem;
+      }
+      .mobile-nav {
+        display: none;
+        flex-direction: column;
+        gap: 0.85rem;
+        padding: 1.1rem 6vw 1.4rem;
+        border-bottom: 1px solid var(--border);
+        background: var(--white);
+      }
+      .mobile-nav.open {
+        display: flex;
+      }
+      .mobile-nav a {
+        font-size: 0.88rem;
+        font-weight: 500;
+        color: var(--mid);
+        text-decoration: none;
+      }
+
+      /* ── SHARED ── */
+      .section {
+        padding: 92px 6vw;
+      }
+      .inner {
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        font-size: 0.62rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: var(--light);
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 0.22rem 0.75rem;
+        margin-bottom: 1.1rem;
+      }
+      .big-title {
+        font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
+        font-size: clamp(2rem, 5vw, 3.6rem);
+        font-weight: 900;
+        letter-spacing: -0.04em;
+        line-height: 1.1;
+        color: var(--dark);
+      }
+      .big-title .accent {
+        color: var(--indigo);
+      }
+
+      /* ── HERO ── */
+      #hero {
+        padding: 76px 6vw 88px;
+      }
+      .hero-grid {
+        max-width: 1080px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 4rem;
+        align-items: center;
+      }
+      .status-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 0.28rem 0.8rem;
+        border-radius: 999px;
+        background: var(--green-lt);
+        border: 1px solid #b2e8a0;
+        color: #2e7d10;
+        margin-bottom: 1.5rem;
+      }
+      .status-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #4caf2a;
+        animation: blink 2s ease infinite;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.35;
+        }
+      }
+
+      .hero-h1 {
+        font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
+        font-size: clamp(2.5rem, 6.5vw, 5.2rem);
+        font-weight: 900;
+        letter-spacing: -0.04em;
+        line-height: 1.04;
+        color: var(--dark);
+        margin-bottom: 1.25rem;
+      }
+      .hero-h1 .hl {
+        background: linear-gradient(135deg, var(--indigo) 0%, #a855f7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .hero-desc {
+        font-size: 0.92rem;
+        color: var(--mid);
+        line-height: 1.85;
+        max-width: 440px;
+        margin-bottom: 2rem;
+      }
+      .hero-btns {
+        display: flex;
+        gap: 0.65rem;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .btn-dark {
+        font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
+        padding: 0.72rem 1.55rem;
+        border-radius: 999px;
+        background: var(--dark);
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition:
+          opacity 0.2s,
+          transform 0.18s;
+      }
+      .btn-dark:hover {
+        opacity: 0.8;
+        transform: translateY(-2px);
+      }
+      .btn-ghost {
+        font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
+        padding: 0.72rem 1.55rem;
+        border-radius: 999px;
+        border: 1.5px solid var(--border);
+        background: transparent;
+        color: var(--dark);
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition:
+          border-color 0.2s,
+          color 0.2s,
+          transform 0.18s;
+      }
+      .btn-ghost:hover {
+        border-color: var(--indigo);
+        color: var(--indigo);
+        transform: translateY(-2px);
+      }
+
+      .hero-photo {
+        position: relative;
+        flex-shrink: 0;
+      }
+      .hero-photo img {
+        width: clamp(200px, 20vw, 280px);
+        border-radius: var(--r-lg);
+        object-fit: cover;
+        aspect-ratio: 3/4;
+        display: block;
+        border: 1px solid var(--border);
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.07);
+      }
+      .float-card {
+        position: absolute;
+        bottom: -14px;
+        left: -22px;
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--r);
+        padding: 0.75rem 1rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.09);
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        min-width: 172px;
+      }
+      .fc-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: var(--indigo-lt);
+        color: var(--indigo);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.95rem;
+        flex-shrink: 0;
+      }
+      .fc-label {
+        font-size: 0.58rem;
+        color: var(--light);
+        margin-bottom: 0.05rem;
+      }
+      .fc-val {
+        font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--dark);
+      }
+
+      /* ── ABOUT ── */
+      #about {
+        background: var(--bg);
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+        gap: 5rem;
+        align-items: center;
+        margin-top: 2.5rem;
+      }
+      .about-img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: var(--r-lg);
+        object-fit: cover;
+        aspect-ratio: 3/4;
+        border: 1px solid var(--border);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.07);
+        display: block;
+      }
+      .about-title {
+        font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
+        font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+        font-weight: 900;
+        letter-spacing: -0.035em;
+        line-height: 1.12;
+        margin-bottom: 1rem;
+        color: var(--dark);
+      }
+      .about-title .accent {
+        color: var(--indigo);
+      }
+      .about-body {
+        font-size: 0.88rem;
+        color: var(--mid);
+        line-height: 1.85;
+        margin-bottom: 1.6rem;
+      }
+      .info-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .pill {
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 0.28rem 0.8rem;
+        border-radius: 999px;
+        border: 1.5px solid;
+      }
+      .pill-indigo {
+        background: var(--indigo-lt);
+        border-color: #c0b8ff;
+        color: #4a42cc;
+      }
+      .pill-green {
+        background: var(--green-lt);
+        border-color: #a0dba0;
+        color: #2e7d10;
+      }
+      .pill-pink {
+        background: var(--pink-lt);
+        border-color: #e8a0d8;
+        color: #8a2080;
+      }
+      .pill-blue {
+        background: var(--blue-lt);
+        border-color: #90caf9;
+        color: #1e4da8;
+      }
+      .pill-yellow {
+        background: var(--yellow-lt);
+        border-color: #edd870;
+        color: #7a5a00;
+      }
+      .pill-teal {
+        background: var(--teal-lt);
+        border-color: #80d0d0;
+        color: #006060;
+      }
+
+      /* ── SKILLS ── */
+      .skills-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+      }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      .sc {
+        background: var(--white);
+        border: 1.5px solid var(--border);
+        border-radius: var(--r);
+        padding: 1.6rem 1.5rem;
+        transition:
+          border-color 0.22s,
+          transform 0.22s,
+          box-shadow 0.22s;
+      }
+      .sc:hover {
+        border-color: var(--indigo);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 36px rgba(108, 99, 255, 0.1);
+      }
+      .sc-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+      .ico-indigo {
+        background: var(--indigo-lt);
+        color: var(--indigo);
+      }
+      .ico-green {
+        background: var(--green-lt);
+        color: #2e7d10;
+      }
+      .ico-pink {
+        background: var(--pink-lt);
+        color: #8a2080;
+      }
+      .ico-blue {
+        background: var(--blue-lt);
+        color: #1e4da8;
+      }
+      .ico-yellow {
+        background: var(--yellow-lt);
+        color: #7a5a00;
+      }
+      .ico-teal {
+        background: var(--teal-lt);
+        color: #006060;
+      }
+      .sc-name {
+        font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--dark);
+        letter-spacing: -0.02em;
+        margin-bottom: 0.4rem;
+      }
+      .sc-desc {
+        font-size: 0.77rem;
+        color: var(--light);
+        line-height: 1.65;
+      }
+      .sc-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        margin-top: 0.55rem;
+      }
+      .tag {
+        font-size: 0.6rem;
+        font-weight: 600;
+        padding: 0.15rem 0.55rem;
+        border-radius: 999px;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        color: var(--light);
+      }
+
+      /* ── EXPERIENCE ── */
+      #experience {
+        background: var(--bg);
+      }
+      .exp-list {
+        margin-top: 2.5rem;
+      }
+      .exp-row {
+        display: grid;
+        grid-template-columns: 170px 1fr;
+        gap: 2rem;
+        padding: 1.8rem 0;
+        border-top: 1px solid var(--border);
+      }
+      .exp-row:last-child {
+        border-bottom: 1px solid var(--border);
+      }
+      .exp-period {
+        font-size: 0.68rem;
+        color: var(--light);
+        font-weight: 500;
+        padding-top: 0.2rem;
+      }
+      .exp-role {
+        font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
+        font-size: 0.97rem;
+        font-weight: 700;
+        color: var(--dark);
+        letter-spacing: -0.02em;
+        margin-bottom: 0.25rem;
+      }
+      .exp-org {
+        font-size: 0.75rem;
+        color: var(--indigo);
+        font-weight: 600;
+        margin-bottom: 0.45rem;
+      }
+      .exp-desc {
+        font-size: 0.78rem;
+        color: var(--mid);
+        line-height: 1.75;
+      }
+
+      /* ── CONTACT ── */
+      .contact-grid {
+        margin-top: 2.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+      }
+      .contact-title {
+        font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
+        font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+        font-weight: 900;
+        letter-spacing: -0.035em;
+        line-height: 1.12;
+        color: var(--dark);
+      }
+      .contact-title .accent {
+        color: var(--indigo);
+      }
+      .contact-desc {
+        font-size: 0.88rem;
+        color: var(--mid);
+        line-height: 1.82;
+        margin: 0.9rem 0 1.6rem;
+      }
+      .contact-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .c-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.9rem 1.1rem;
+        border-radius: var(--r-sm);
+        background: var(--bg);
+        border: 1.5px solid var(--border);
+        text-decoration: none;
+        color: var(--dark);
+        transition:
+          border-color 0.2s,
+          background 0.2s,
+          transform 0.2s;
+      }
+      .c-row:hover {
+        border-color: var(--indigo);
+        background: var(--indigo-lt);
+        transform: translateX(4px);
+      }
+      .c-row-left {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+      .ci {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+      }
+      .ci-email {
+        background: var(--blue-lt);
+        color: #1e4da8;
+      }
+      .ci-github {
+        background: #1d1d1d;
+        color: #fff;
+      }
+      .ci-tg {
+        background: #e3f5ff;
+        color: #0088cc;
+      }
+      .ci-x {
+        background: #f0f0f0;
+        color: #222;
+      }
+      .c-arr {
+        color: var(--light);
+        font-size: 0.8rem;
+      }
+      .cform {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+      }
+      .fg label {
+        display: block;
+        font-size: 0.61rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--light);
+        margin-bottom: 0.4rem;
+      }
+      .fg input,
+      .fg textarea {
+        width: 100%;
+        background: var(--bg);
+        border: 1.5px solid var(--border);
+        border-radius: var(--r-sm);
+        padding: 0.75rem 0.95rem;
+        font-size: 0.84rem;
+        font-family: "Noto Sans Thai", sans-serif;
+        color: var(--dark);
+        outline: none;
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+        resize: none;
+      }
+      .fg input:focus,
+      .fg textarea:focus {
+        border-color: var(--indigo);
+        background: var(--white);
+      }
+      .fg input::placeholder,
+      .fg textarea::placeholder {
+        color: #bbb;
+      }
+      .form-btn {
+        align-self: flex-start;
+        font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
+        padding: 0.72rem 1.55rem;
+        border-radius: 999px;
+        background: var(--dark);
+        color: #fff;
+        border: none;
+        font-size: 0.8rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition:
+          opacity 0.2s,
+          transform 0.18s;
+      }
+      .form-btn:hover {
+        opacity: 0.8;
+        transform: translateY(-2px);
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 1.8rem 6vw;
+      }
+      .footer-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .f-logo {
+        font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
+        font-size: 0.85rem;
+        font-weight: 800;
+        color: var(--dark);
+        letter-spacing: -0.02em;
+      }
+      .f-copy {
+        font-size: 0.67rem;
+        color: var(--light);
+      }
+      .f-socials {
+        display: flex;
+        gap: 0.45rem;
+      }
+      .fsb {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+        border: 1.5px solid var(--border);
+        background: var(--bg);
+        color: var(--mid);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.88rem;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .fsb:hover {
+        border-color: var(--indigo);
+        color: var(--indigo);
+        background: var(--indigo-lt);
+      }
+
+      /* ── REVEAL ── */
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal.v {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 860px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-photo {
+          display: none;
+        }
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        .about-img {
+          max-width: 220px;
+          aspect-ratio: 1/1;
+        }
+        .skills-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .exp-row {
+          grid-template-columns: 1fr;
+          gap: 0.25rem;
+        }
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
+        .nav-links {
+          display: none;
+        }
+        .nav-cta {
+          display: none;
+        }
+        .nav-ham {
+          display: block;
+        }
+        .footer-inner {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.75rem;
+        }
+      }
+      @media (max-width: 560px) {
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-btns {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .section {
+          padding: 60px 5vw;
+        }
+        #hero {
+          padding: 52px 5vw 64px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a class="nav-logo" href="#hero">Krissanachai S.</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="mailto:krissanachai.s@nso.mail.go.th" class="nav-cta"
+        >Get in Touch</a
+      >
+      <button class="nav-ham" id="hamBtn" aria-label="Toggle menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </nav>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#about" onclick="closeMob()">About</a>
+      <a href="#skills" onclick="closeMob()">Skills</a>
+      <a href="#experience" onclick="closeMob()">Experience</a>
+      <a href="#contact" onclick="closeMob()">Contact</a>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-grid">
+        <div class="hero-left reveal">
+          <div class="status-pill">
+            <span class="status-dot"></span> พร้อมรับงานใหม่
+          </div>
+          <h1 class="hero-h1">
+            Hi, I'm<br />
+            <span class="hl">Krissanachai</span><br />
+            Sararam.
+          </h1>
+          <p class="hero-desc">
+            นักวิชาการคอมพิวเตอร์ปฏิบัติการ สำนักงานสถิติแห่งชาติ<br />
+            กระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม<br />
+            Python · Web Dev · Data Analysis · LINE API
+          </p>
+          <div class="hero-btns">
+            <a href="#contact" class="btn-dark">ติดต่อฉัน &rarr;</a>
+            <a
+              href="https://github.com/krissanachais"
+              target="_blank"
+              rel="noopener"
+              class="btn-ghost"
+              ><i class="bi bi-github"></i> GitHub</a
+            >
+          </div>
+        </div>
+        <div class="hero-photo reveal" style="transition-delay: 0.12s">
+          <img
+            src="./asset/img/20240508_remini_iOSx300.png"
+            alt="Krissanachai Sararam"
+          />
+          <div class="float-card">
+            <div class="fc-icon"><i class="bi bi-building"></i></div>
+            <div>
+              <div class="fc-label">ทำงานที่</div>
+              <div class="fc-val">สถิติแห่งชาติ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="inner">
+        <div class="eyebrow">About me</div>
+        <div class="about-grid">
+          <div class="reveal">
+            <img
+              class="about-img"
+              src="./asset/img/20240508_remini_iOSx300.png"
+              alt="Krissanachai Sararam"
+            />
+          </div>
+          <div class="reveal" style="transition-delay: 0.1s">
+            <h2 class="about-title">
+              รู้จักกับ<br /><span class="accent">กฤษณชัย</span>
+            </h2>
+            <p class="about-body">
+              สวัสดีครับ ผม
+              <strong>กฤษณชัย สาระรัมย์</strong>
+              ทำงานในตำแหน่งนักวิชาการคอมพิวเตอร์ปฏิบัติการ ณ
+              สำนักงานสถิติแห่งชาติ กระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม
+              ผมชอบพัฒนาซอฟต์แวร์ วิเคราะห์ข้อมูลสถิติ
+              และนำเทคโนโลยีดิจิทัลมาสร้างคุณค่าให้กับองค์กร ทั้ง Python, SQL,
+              Web Technology และ LINE API
+            </p>
+            <div class="info-pills">
+              <span class="pill pill-indigo"
+                ><i class="bi bi-geo-alt-fill"></i>&nbsp;กรุงเทพมหานคร</span
+              >
+              <span class="pill pill-green"
+                ><i class="bi bi-cpu-fill"></i>&nbsp;Computer Scientist</span
+              >
+              <span class="pill pill-blue"
+                ><i class="bi bi-building"></i>&nbsp;NSO Thailand</span
+              >
+              <span class="pill pill-yellow"
+                ><i class="bi bi-code-slash"></i>&nbsp;Python · JS · SQL</span
+              >
+              <span class="pill pill-teal"
+                ><i class="bi bi-graph-up-arrow"></i>&nbsp;685 commits /
+                year</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="inner">
+        <div class="skills-head">
+          <div>
+            <div class="eyebrow">Skills &amp; Tech</div>
+            <h2 class="big-title">
+              สิ่งที่ฉัน<br /><span class="accent">ทำได้</span>
+            </h2>
+          </div>
+          <p
+            style="
+              font-size: 0.84rem;
+              color: var(--light);
+              max-width: 240px;
+              text-align: right;
+              line-height: 1.75;
+            "
+          >
+            เทคโนโลยีที่ใช้งานจริง<br />ในการทำงานทุกวัน
+          </p>
+        </div>
+        <div class="skills-grid">
+          <div class="sc reveal">
+            <div class="sc-icon ico-indigo">
+              <i class="bi bi-filetype-py"></i>
+            </div>
+            <div class="sc-name">Python</div>
+            <div class="sc-desc">
+              เขียน script อัตโนมัติ วิเคราะห์ข้อมูล และ security analysis ด้วย
+              CodeQL
+            </div>
+            <div class="sc-tags">
+              <span class="tag">pandas</span><span class="tag">matplotlib</span
+              ><span class="tag">automation</span
+              ><span class="tag">CodeQL</span>
+            </div>
+          </div>
+
+          <div class="sc reveal" style="transition-delay: 0.06s">
+            <div class="sc-icon ico-green">
+              <i class="bi bi-code-slash"></i>
+            </div>
+            <div class="sc-name">HTML · CSS · JavaScript</div>
+            <div class="sc-desc">
+              พัฒนาเว็บแอปพลิเคชัน Frontend ตั้งแต่ UI design จนถึง interactive
+              logic
+            </div>
+            <div class="sc-tags">
+              <span class="tag">HTML5</span><span class="tag">CSS3</span
+              ><span class="tag">Vanilla JS</span
+              ><span class="tag">Responsive</span>
+            </div>
+          </div>
+
+          <div class="sc reveal" style="transition-delay: 0.12s">
+            <div class="sc-icon ico-teal">
+              <i class="bi bi-chat-dots-fill"></i>
+            </div>
+            <div class="sc-name">LINE API · LIFF</div>
+            <div class="sc-desc">
+              พัฒนา LINE Bot และ LIFF v2 application เชื่อมต่อบริการกับ LINE
+              platform
+            </div>
+            <div class="sc-tags">
+              <span class="tag">LIFF v2</span
+              ><span class="tag">Messaging API</span
+              ><span class="tag">LINE OA</span>
+            </div>
+          </div>
+
+          <div class="sc reveal" style="transition-delay: 0.18s">
+            <div class="sc-icon ico-blue">
+              <i class="bi bi-database-fill"></i>
+            </div>
+            <div class="sc-name">SQL · Database</div>
+            <div class="sc-desc">
+              จัดการฐานข้อมูล เขียน query ซับซ้อน และออกแบบโครงสร้าง database
+            </div>
+            <div class="sc-tags">
+              <span class="tag">SQL</span><span class="tag">MySQL</span
+              ><span class="tag">Data Modeling</span>
+            </div>
+          </div>
+
+          <div class="sc reveal" style="transition-delay: 0.24s">
+            <div class="sc-icon ico-yellow">
+              <i class="bi bi-bar-chart-fill"></i>
+            </div>
+            <div class="sc-name">Data Analysis</div>
+            <div class="sc-desc">
+              วิเคราะห์ข้อมูลสถิติ สร้าง dashboard
+              และรายงานเพื่อสนับสนุนการตัดสินใจ
+            </div>
+            <div class="sc-tags">
+              <span class="tag">Statistics</span
+              ><span class="tag">Visualization</span
+              ><span class="tag">NSO Data</span>
+            </div>
+          </div>
+
+          <div class="sc reveal" style="transition-delay: 0.3s">
+            <div class="sc-icon ico-pink">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <div class="sc-name">Security · CodeQL</div>
+            <div class="sc-desc">
+              วิเคราะห์ความปลอดภัยของโค้ด (SAST) ด้วย CodeQL และ GitHub Advanced
+              Security
+            </div>
+            <div class="sc-tags">
+              <span class="tag">CodeQL</span><span class="tag">SAST</span
+              ><span class="tag">GitHub Security</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="inner">
+        <div class="eyebrow">Experience</div>
+        <h2 class="big-title" style="margin-bottom: 0">
+          ประสบการณ์<br /><span class="accent">การทำงาน</span>
+        </h2>
+        <div class="exp-list">
+          <div class="exp-row reveal">
+            <div class="exp-period">ปัจจุบัน</div>
+            <div>
+              <div class="exp-role">นักวิชาการคอมพิวเตอร์ปฏิบัติการ</div>
+              <div class="exp-org">
+                สำนักงานสถิติแห่งชาติ · กระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม
+              </div>
+              <div class="exp-desc">
+                ดูแลและพัฒนาระบบสารสนเทศ วิเคราะห์ข้อมูลสถิติ
+                พัฒนาเว็บแอปพลิเคชันเพื่อเผยแพร่ข้อมูล และขับเคลื่อน
+                e-Government และ Data-Driven Organization ภายในองค์กร
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-row reveal" style="transition-delay: 0.08s">
+            <div class="exp-period">Project</div>
+            <div>
+              <div class="exp-role">LINE LIFF Application</div>
+              <div class="exp-org">line-liff-v2-starter · GitHub</div>
+              <div class="exp-desc">
+                พัฒนา starter template สำหรับ LINE LIFF v2
+                เพื่อเป็นฐานในการสร้าง LINE mini app เชื่อมต่อกับ LINE Messaging
+                API และ OA services
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-row reveal" style="transition-delay: 0.14s">
+            <div class="exp-period">Learning</div>
+            <div>
+              <div class="exp-role">Introduction to CodeQL</div>
+              <div class="exp-org">GitHub Skills · Python 90% · HTML 10%</div>
+              <div class="exp-desc">
+                ศึกษาการวิเคราะห์ความปลอดภัยของโค้ด (SAST) ด้วย CodeQL ผ่าน
+                GitHub Skills ครอบคลุม query writing, pattern matching และ
+                security automation
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="inner">
+        <div class="eyebrow">Contact</div>
+        <div class="contact-grid">
+          <div class="reveal">
+            <h2 class="contact-title">
+              มีโปรเจกต์<br />ในใจ?<br /><span class="accent">คุยกันเลย</span>
+            </h2>
+            <p class="contact-desc">
+              ยินดีพูดคุยทุกเรื่องที่เกี่ยวกับ Data, Web Technology, LINE API
+              หรือความร่วมมือด้านดิจิทัล
+            </p>
+            <div class="contact-links">
+              <a href="mailto:krissanachai.s@nso.mail.go.th" class="c-row">
+                <div class="c-row-left">
+                  <div class="ci ci-email">
+                    <i class="bi bi-envelope-fill"></i>
+                  </div>
+                  krissanachai.s@nso.mail.go.th
+                </div>
+                <i class="bi bi-arrow-right c-arr"></i>
+              </a>
+              <a
+                href="https://github.com/krissanachais"
+                target="_blank"
+                rel="noopener"
+                class="c-row"
+              >
+                <div class="c-row-left">
+                  <div class="ci ci-github"><i class="bi bi-github"></i></div>
+                  github.com/krissanachais
+                </div>
+                <i class="bi bi-arrow-right c-arr"></i>
+              </a>
+              <a
+                href="https://t.me/krissanachai16"
+                target="_blank"
+                rel="noopener"
+                class="c-row"
+              >
+                <div class="c-row-left">
+                  <div class="ci ci-tg"><i class="bi bi-telegram"></i></div>
+                  @krissanachai16
+                </div>
+                <i class="bi bi-arrow-right c-arr"></i>
+              </a>
+              <a
+                href="https://x.com/MogItPure"
+                target="_blank"
+                rel="noopener"
+                class="c-row"
+              >
+                <div class="c-row-left">
+                  <div class="ci ci-x"><i class="bi bi-twitter-x"></i></div>
+                  @MogItPure
+                </div>
+                <i class="bi bi-arrow-right c-arr"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="reveal" style="transition-delay: 0.1s">
+            <form class="cform" onsubmit="handleForm(event)">
+              <div class="fg">
+                <label>ชื่อ</label
+                ><input type="text" placeholder="ชื่อของคุณ" required />
+              </div>
+              <div class="fg">
+                <label>อีเมล</label
+                ><input type="email" placeholder="email@example.com" required />
+              </div>
+              <div class="fg">
+                <label>ข้อความ</label
+                ><textarea
+                  rows="5"
+                  placeholder="บอกเล่าเกี่ยวกับโปรเจกต์หรือสิ่งที่คุณสนใจ..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="form-btn">
+                ส่งข้อความ&nbsp;<i class="bi bi-send-fill"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="f-logo">Krissanachai Sararam</div>
+        <div class="f-copy">© 2026 · All rights reserved</div>
+        <div class="f-socials">
+          <a
+            href="mailto:krissanachai.s@nso.mail.go.th"
+            class="fsb"
+            title="Email"
+            ><i class="bi bi-envelope-fill"></i
+          ></a>
+          <a
+            href="https://github.com/krissanachais"
+            target="_blank"
+            rel="noopener"
+            class="fsb"
+            title="GitHub"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a
+            href="https://t.me/krissanachai16"
+            target="_blank"
+            rel="noopener"
+            class="fsb"
+            title="Telegram"
+            ><i class="bi bi-telegram"></i
+          ></a>
+          <a
+            href="https://x.com/MogItPure"
+            target="_blank"
+            rel="noopener"
+            class="fsb"
+            title="X (Twitter)"
+            ><i class="bi bi-twitter-x"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile nav
+      const hamBtn = document.getElementById("hamBtn");
+      const mobileNav = document.getElementById("mobileNav");
+      hamBtn.addEventListener("click", () => {
+        const open = mobileNav.classList.toggle("open");
+        hamBtn.innerHTML = open
+          ? '<i class="bi bi-x-lg"></i>'
+          : '<i class="bi bi-list"></i>';
+      });
+      function closeMob() {
+        mobileNav.classList.remove("open");
+        hamBtn.innerHTML = '<i class="bi bi-list"></i>';
+      }
+
+      // Scroll reveal
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("v");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      // Contact form — mailto fallback
+      function handleForm(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector(".form-btn");
+        const name = e.target.querySelector("input[type=text]").value;
+        const body = e.target.querySelector("textarea").value;
+        const mail = e.target.querySelector("input[type=email]").value;
+        window.location.href = `mailto:krissanachai.s@nso.mail.go.th?subject=Hello from ${encodeURIComponent(name)}&body=${encodeURIComponent(body)}%0A%0AReply to: ${encodeURIComponent(mail)}`;
+        btn.innerHTML = "&#10003; ส่งเรียบร้อย";
+        btn.style.background = "#4caf2a";
+        setTimeout(() => {
+          btn.innerHTML = 'ส่งข้อความ&nbsp;<i class="bi bi-send-fill"></i>';
+          btn.style.background = "";
+          e.target.reset();
+        }, 3000);
+      }
+    </script>
   </body>
 </html>
