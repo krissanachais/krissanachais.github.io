@@ -58,11 +58,12 @@ Portfolio website showcasing professional experience, technical skills, and open
 
 ## Open Source Repos
 
-| Repo                                                                                | Description                   |
-| ----------------------------------------------------------------------------------- | ----------------------------- |
-| [krissanachais.github.io](https://github.com/krissanachais/krissanachais.github.io) | This portfolio                |
-| [line-liff-v2-starter](https://github.com/krissanachais/line-liff-v2-starter)       | LINE LIFF v2 starter template |
-| [intro](https://github.com/krissanachais/intro)                                     | Introduction/profile page     |
+| Repo                                                                                | Description    |
+| ----------------------------------------------------------------------------------- | -------------- |
+| [krissanachais.github.io](https://github.com/krissanachais/krissanachais.github.io) | This portfolio |
+
+> Private work (NSO internal systems) lives in private repositories under
+> [@krissanachais](https://github.com/krissanachais).
 
 ---
 
