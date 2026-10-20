@@ -648,10 +648,15 @@ nav {
 
 /* ── STATS BAND ── */
 #stats {
-  background: var(--dark);
+  background: #1b1c22; /* fixed dark band in both themes */
   padding: 54px 6vw;
   position: relative;
   overflow: hidden;
+}
+:root[data-theme="dark"] #stats {
+  background: #16171c;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 .stats-grid {
   max-width: 1080px;
