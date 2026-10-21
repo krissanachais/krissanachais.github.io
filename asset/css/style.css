@@ -145,21 +145,29 @@ nav {
     border-color 0.4s ease;
 }
 .nav-logo {
-  font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
-  font-weight: 800;
-  font-size: 1rem;
-  color: var(--dark);
-  text-decoration: none;
-  letter-spacing: -0.02em;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  text-decoration: none;
+  transition: transform 0.2s var(--ease);
 }
-.nav-logo .dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--indigo), var(--indigo-2));
+.nav-logo:hover {
+  transform: translateY(-1px);
+}
+.nav-logo img {
+  height: 30px;
+  width: auto;
+}
+.logo-on-light {
+  display: block;
+}
+.logo-on-dark {
+  display: none;
+}
+:root[data-theme="dark"] .logo-on-light {
+  display: none;
+}
+:root[data-theme="dark"] .logo-on-dark {
+  display: block;
 }
 .nav-links {
   display: flex;
@@ -1381,11 +1389,12 @@ footer {
   gap: 1rem;
 }
 .f-logo {
-  font-family: "Cabinet Grotesk", "Noto Sans Thai", sans-serif;
-  font-size: 0.85rem;
-  font-weight: 800;
-  color: var(--dark);
-  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+}
+.f-logo img {
+  height: 30px;
+  width: auto;
 }
 .f-copy {
   font-size: 0.67rem;

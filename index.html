@@ -10,11 +10,8 @@
     />
     <meta name="author" content="Krissanachai Sararam" />
     <meta name="theme-color" content="#6c63ff" />
-    <link
-      rel="icon"
-      href="./asset/img/20260421_034717396_iOS.jpg"
-      type="image/jpeg"
-    />
+    <link rel="icon" href="./asset/img/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./asset/img/favicon.png" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Krissanachai Sararam — Portfolio" />
@@ -69,9 +66,22 @@
 
     <!-- NAV -->
     <nav>
-      <a class="nav-logo" href="#hero"
-        ><span class="dot"></span>Krissanachai S.</a
-      >
+      <a class="nav-logo" href="#hero" aria-label="KrissCode.dev — home">
+        <img
+          class="logo-on-light"
+          src="./asset/img/logo-h-light.png"
+          alt="KrissCode.dev"
+          width="1511"
+          height="354"
+        />
+        <img
+          class="logo-on-dark"
+          src="./asset/img/logo-h-dark.png"
+          alt="KrissCode.dev"
+          width="1511"
+          height="354"
+        />
+      </a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -758,7 +768,24 @@
     <!-- FOOTER -->
     <footer>
       <div class="footer-inner">
-        <div class="f-logo">Krissanachai Sararam</div>
+        <a class="f-logo" href="#hero" aria-label="KrissCode.dev">
+          <img
+            class="logo-on-light"
+            src="./asset/img/logo-h-light.png"
+            alt="KrissCode.dev"
+            width="1511"
+            height="354"
+            loading="lazy"
+          />
+          <img
+            class="logo-on-dark"
+            src="./asset/img/logo-h-dark.png"
+            alt="KrissCode.dev"
+            width="1511"
+            height="354"
+            loading="lazy"
+          />
+        </a>
         <div class="f-copy">© <span id="year">2026</span> · All rights reserved</div>
         <div class="f-socials">
           <a
