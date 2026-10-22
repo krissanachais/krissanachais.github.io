@@ -76,9 +76,9 @@ open-source projects. Designed with a modern Meelo-inspired layout, a full
 
 ### Primary Skills
 
-- **TypeScript · Next.js · Node.js** — Internal web applications (internal-notification-bot, internal-booking-service, internal-survey-app, internal-hr-system)
-- **PHP · Laravel · Blade** — Backend services and web apps (internal-url-shortener, internal-info-service, internal-event-site)
-- **Government Systems** — internal-crm, internal-repair-system, internal-online-form
+- **TypeScript · Next.js · Node.js** — Internal web applications (notification, meeting-room booking, survey, and HR systems)
+- **PHP · Laravel · Blade** — Backend services and web apps (URL shortener, information publishing, event sites)
+- **Government Systems** — CRM, repair-request, and online form systems
 
 ### Secondary Skills
 
