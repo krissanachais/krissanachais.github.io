@@ -10,6 +10,15 @@
   const $ = (s, c) => (c || document).querySelector(s);
   const $$ = (s, c) => Array.from((c || document).querySelectorAll(s));
 
+  /* ── EMAIL (no plaintext address in the HTML or repo) ── */
+  // Assembled at runtime so the address never appears as a plain string
+  // that email-harvesting bots can scrape. Links fall back to #contact.
+  const TO = ["krissanachai.s", ["nso", "mail", "go", "th"].join(".")].join(
+    String.fromCharCode(64),
+  );
+  $$("[data-email]").forEach((a) => (a.href = "mailto:" + TO));
+  $$("[data-email-text]").forEach((el) => (el.textContent = TO));
+
   /* ── THEME TOGGLE ── */
   (function theme() {
     const root = document.documentElement;
@@ -260,11 +269,6 @@
   /* ── CONTACT FORM (mailto fallback) ── */
   const form = $("#contactForm");
   if (form) form.addEventListener("submit", handleForm);
-  // Assembled at runtime so the address never appears as a plain string
-  // that email-harvesting bots can scrape from this file.
-  const TO = ["krissanachai.s", ["nso", "mail", "go", "th"].join(".")].join(
-    String.fromCharCode(64),
-  );
   function handleForm(e) {
     e.preventDefault();
     const f = e.target;
