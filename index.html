@@ -9,6 +9,14 @@
       content="Portfolio ของ Krissanachai Sararam นักวิชาการคอมพิวเตอร์ปฏิบัติการ สำนักงานสถิติแห่งชาติ — Full-Stack Web, Data & Statistics, LINE/Telegram API"
     />
     <meta name="author" content="Krissanachai Sararam" />
+
+    <!-- Security: GitHub Pages can't send custom headers, so set what we can here.
+         No inline scripts are allowed; inline style attributes only. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://api.fontshare.com https://cdn.jsdelivr.net; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com https://cdn.fontshare.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="theme-color" content="#6c63ff" />
     <link rel="icon" href="./asset/img/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="./asset/img/favicon.png" />
@@ -24,23 +32,13 @@
       content="./asset/img/ChatGPT%20Image%20Apr%2023%2C%202026%2C%2008_43_20%20AM.png"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://krissanachais.github.io" />
+    <meta property="og:url" content="https://krisscode.dev/" />
+    <link rel="canonical" href="https://krisscode.dev/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@MogItPure" />
 
     <!-- Avoid dark-mode flash: apply saved theme before paint -->
-    <script>
-      (function () {
-        try {
-          var t =
-            localStorage.getItem("theme") ||
-            (window.matchMedia("(prefers-color-scheme: dark)").matches
-              ? "dark"
-              : "light");
-          document.documentElement.setAttribute("data-theme", t);
-        } catch (e) {}
-      })();
-    </script>
+    <script src="./asset/js/theme-init.js"></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,6 +54,8 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+"
+      crossorigin="anonymous"
     />
 
     <!-- Styles -->
@@ -739,19 +739,20 @@
           </div>
 
           <div class="reveal" style="transition-delay: 0.1s">
-            <form class="cform" onsubmit="handleForm(event)">
+            <form class="cform" id="contactForm">
               <div class="fg">
                 <label>ชื่อ</label
-                ><input type="text" placeholder="ชื่อของคุณ" required />
+                ><input type="text" placeholder="ชื่อของคุณ" maxlength="100" required />
               </div>
               <div class="fg">
                 <label>อีเมล</label
-                ><input type="email" placeholder="email@example.com" required />
+                ><input type="email" placeholder="email@example.com" maxlength="254" required />
               </div>
               <div class="fg">
                 <label>ข้อความ</label
                 ><textarea
                   rows="5"
+                  maxlength="1500"
                   placeholder="บอกเล่าเกี่ยวกับโปรเจกต์หรือสิ่งที่คุณสนใจ..."
                   required
                 ></textarea>

@@ -258,7 +258,9 @@
   })();
 
   /* ── CONTACT FORM (mailto fallback) ── */
-  window.handleForm = function (e) {
+  const form = $("#contactForm");
+  if (form) form.addEventListener("submit", handleForm);
+  function handleForm(e) {
     e.preventDefault();
     const f = e.target;
     const btn = f.querySelector(".form-btn");
@@ -279,7 +281,7 @@
       btn.style.background = "";
       f.reset();
     }, 3000);
-  };
+  }
 
   /* ── FOOTER YEAR ── */
   const y = $("#year");
