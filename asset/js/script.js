@@ -260,6 +260,11 @@
   /* ── CONTACT FORM (mailto fallback) ── */
   const form = $("#contactForm");
   if (form) form.addEventListener("submit", handleForm);
+  // Assembled at runtime so the address never appears as a plain string
+  // that email-harvesting bots can scrape from this file.
+  const TO = ["krissanachai.s", ["nso", "mail", "go", "th"].join(".")].join(
+    String.fromCharCode(64),
+  );
   function handleForm(e) {
     e.preventDefault();
     const f = e.target;
@@ -268,7 +273,8 @@
     const mail = f.querySelector("input[type=email]").value;
     const body = f.querySelector("textarea").value;
     window.location.href =
-      "mailto:krissanachai.s [at] nso [dot] mail [dot] go [dot] th" +
+      "mailto:" +
+      TO +
       "?subject=" +
       encodeURIComponent("Hello from " + name) +
       "&body=" +

@@ -114,7 +114,7 @@ Then open http://localhost:4321.
 
 ## Contact
 
-- 📧 krissanachai.s [at] nso [dot] mail [dot] go [dot] th
+- 📧 krissanachai.s [at] nso [dot] mail [dot] go [dot] th — or use the contact form at [krisscode.dev](https://krisscode.dev/#contact)
 - 💬 Telegram: [@krissanachai16](https://t.me/krissanachai16)
 - 🐦 X: [@MogItPure](https://x.com/MogItPure)
 - 🐙 GitHub: [krissanachais](https://github.com/krissanachais)
