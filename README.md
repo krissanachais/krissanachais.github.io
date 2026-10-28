@@ -22,7 +22,6 @@ open-source projects. Designed with a modern Meelo-inspired layout, a full
   Tailwind radii, flat backgrounds, one motion curve
 - 🌗 **Dark / light mode** with `localStorage` persistence and a crossfade switch
 - 🧭 **Floating pill navigation**, full height mobile menu with staggered links
-- ✨ **Tagline reveal**: words light up one at a time on scroll (Thai segmented with `Intl.Segmenter`)
 - 🕸️ **Interactive constellation** behind the hero, line mask heading reveals,
   typewriter role, count up stats, card tilt, magnetic buttons, custom cursor
 - ✅ **Inline form validation** with specific, calm messages
@@ -57,7 +56,7 @@ open-source projects. Designed with a modern Meelo-inspired layout, a full
 │   ├── css/style.css     # All styles, light + dark themes
 │   ├── js/theme-init.js  # Applies saved theme before first paint
 │   ├── js/script.js      # Core behaviour (theme, nav, form, reveals)
-│   ├── js/fx.js          # Visual effects (constellation, tagline, cursor)
+│   ├── js/fx.js          # Visual effects (constellation, cursor, magnetic buttons)
 │   └── img/              # Photos, logos (KS current, KRISSCODE previous), favicon
 │       └── brand/        # Original KS logo source files (light/dark, horizontal/stacked)
 ├── CNAME                 # Custom domain → krisscode.dev
@@ -75,7 +74,6 @@ open-source projects. Designed with a modern Meelo-inspired layout, a full
 | **About**      | Background and personal profile                              |
 | **Skills**     | Primary & Secondary skill groups + animated tech marquee     |
 | **Focus**      | Three focus areas: Web app · Data & statistics · Automation  |
-| **Tagline**    | Large type statement, words reveal on scroll                 |
 | **Projects**   | Live GitHub profile summary and private NSO projects         |
 | **Experience** | Work history timeline (NSO, กรมประมง, สดช.)                  |
 | **Contact**    | Email, GitHub, Telegram, X links + message form              |

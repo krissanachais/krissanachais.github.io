@@ -568,20 +568,6 @@ body.menu-open {
   gap: var(--s-100);
   flex-wrap: wrap;
 }
-.hero-proof {
-  display: flex;
-  align-items: center;
-  gap: var(--s-75);
-  margin-top: var(--s-200);
-  font-size: 14px;
-  line-height: 20px;
-  color: var(--light);
-}
-.hero-proof i {
-  font-size: 16px;
-  color: var(--indigo);
-}
-
 .hero-photo {
   position: relative;
   display: none;
@@ -1029,30 +1015,6 @@ body.menu-open {
   font-size: 14px;
   line-height: 20px;
   color: var(--mid);
-}
-
-/* ── TAGLINE REVEAL (B11) ── */
-.tagline {
-  padding: var(--s-900) var(--s-300);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-.tagline-text {
-  max-width: 680px;
-  margin: 0 auto;
-  font-size: 36px;
-  line-height: 40px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--dark);
-  text-wrap: balance;
-}
-.tagline-text .w {
-  opacity: 0.3;
-  transition: opacity var(--d-move) var(--ease);
-}
-.tagline-text .w.on {
-  opacity: 1;
 }
 
 /* ── PROJECTS ── */
