@@ -113,6 +113,7 @@
 
     <!-- HERO -->
     <section id="hero">
+      <canvas id="heroFx" class="hero-fx" aria-hidden="true"></canvas>
       <div class="aurora" aria-hidden="true">
         <span class="a1"></span><span class="a2"></span><span class="a3"></span>
       </div>
@@ -121,10 +122,10 @@
           <div class="status-pill">
             <span class="status-dot"></span> พร้อมรับงานใหม่ · Open to work
           </div>
-          <h1 class="hero-h1">
-            Hi, I'm<br />
-            <span class="hl">Krissanachai</span><br />
-            Sararam.
+          <h1 class="hero-h1 split-lines">
+            <span class="line"><span class="line-in">Hi, I'm</span></span>
+            <span class="line"><span class="line-in hl">Krissanachai</span></span>
+            <span class="line"><span class="line-in">Sararam.</span></span>
           </h1>
           <div class="hero-role" id="heroRole">
             นักวิชาการคอมพิวเตอร์ปฏิบัติการ<span class="caret"></span>
@@ -146,7 +147,7 @@
             >
           </div>
         </div>
-        <div class="hero-photo reveal" style="transition-delay: 0.12s">
+        <div class="hero-photo reveal" data-reveal="scale" style="transition-delay: 0.12s">
           <div class="hero-slideshow" id="heroSlideshow">
             <div class="hs-slide active">
               <img
@@ -192,24 +193,25 @@
           </div>
         </div>
       </div>
+      <a href="#stats" class="scroll-cue" aria-label="เลื่อนลง"><span></span></a>
     </section>
 
     <!-- STATS -->
     <section id="stats">
       <div class="stats-grid">
-        <div class="stat reveal">
+        <div class="stat reveal" data-reveal="blur">
           <div class="stat-num" data-count="4" data-suffix="+">4+</div>
           <div class="stat-label">ปีประสบการณ์ IT ภาครัฐ</div>
         </div>
-        <div class="stat reveal" style="transition-delay: 0.06s">
+        <div class="stat reveal" data-reveal="blur" style="transition-delay: 0.06s">
           <div class="stat-num" data-count="3">3</div>
           <div class="stat-label">หน่วยงานภาครัฐ</div>
         </div>
-        <div class="stat reveal" style="transition-delay: 0.12s">
+        <div class="stat reveal" data-reveal="blur" style="transition-delay: 0.12s">
           <div class="stat-num" data-count="685" data-suffix="+">685+</div>
           <div class="stat-label">Commits ต่อปี</div>
         </div>
-        <div class="stat reveal" style="transition-delay: 0.18s">
+        <div class="stat reveal" data-reveal="blur" style="transition-delay: 0.18s">
           <div class="stat-num" data-count="12" data-suffix="+">12+</div>
           <div class="stat-label">เทคโนโลยีหลัก</div>
         </div>
@@ -221,7 +223,7 @@
       <div class="inner">
         <div class="eyebrow">About me</div>
         <div class="about-grid">
-          <div class="reveal">
+          <div class="reveal" data-reveal="left">
             <div class="about-photos" style="transition-delay: 0.05s">
               <img
                 src="./asset/img/20260421_034717392_iOS.jpg"
@@ -241,7 +243,7 @@
               />
             </div>
           </div>
-          <div class="reveal" style="transition-delay: 0.1s">
+          <div class="reveal" data-reveal="right" style="transition-delay: 0.1s">
             <h2 class="about-title">
               รู้จักกับ<br /><span class="accent">กฤษณชัย</span>
             </h2>
@@ -470,7 +472,7 @@
           </p>
         </div>
         <div class="focus-grid">
-          <article class="focus-card card-base reveal">
+          <article class="focus-card card-base reveal" data-reveal="scale">
             <div class="focus-num">01</div>
             <div class="focus-title">
               <i class="bi bi-window-stack"></i>Web Application
@@ -481,7 +483,7 @@
               และ Blade ให้ใช้งานได้จริงและดูแลต่อง่าย
             </div>
           </article>
-          <article class="focus-card card-base reveal" style="transition-delay: 0.07s">
+          <article class="focus-card card-base reveal" data-reveal="scale" style="transition-delay: 0.07s">
             <div class="focus-num">02</div>
             <div class="focus-title">
               <i class="bi bi-bar-chart-line-fill"></i>Data &amp; Statistics
@@ -492,7 +494,7 @@
               เพื่อสนับสนุนองค์กรแบบ Data-Driven
             </div>
           </article>
-          <article class="focus-card card-base reveal" style="transition-delay: 0.14s">
+          <article class="focus-card card-base reveal" data-reveal="scale" style="transition-delay: 0.14s">
             <div class="focus-num">03</div>
             <div class="focus-title">
               <i class="bi bi-robot"></i>Automation &amp; Bots
@@ -681,7 +683,7 @@
       <div class="inner">
         <div class="eyebrow">Contact</div>
         <div class="contact-grid">
-          <div class="reveal">
+          <div class="reveal" data-reveal="left">
             <h2 class="contact-title">
               มีโปรเจกต์<br />ในใจ?<br /><span class="accent">คุยกันเลย</span>
             </h2>
@@ -738,7 +740,7 @@
             </div>
           </div>
 
-          <div class="reveal" style="transition-delay: 0.1s">
+          <div class="reveal" data-reveal="right" style="transition-delay: 0.1s">
             <form class="cform" id="contactForm">
               <div class="fg">
                 <label>ชื่อ</label
@@ -829,5 +831,6 @@
     </button>
 
     <script src="./asset/js/script.js"></script>
+    <script src="./asset/js/fx.js"></script>
   </body>
 </html>

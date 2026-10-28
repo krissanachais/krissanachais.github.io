@@ -27,8 +27,10 @@
     const prefersDark = window.matchMedia(
       "(prefers-color-scheme: dark)",
     ).matches;
-    const initial = saved || (prefersDark ? "dark" : "light");
-    apply(initial);
+    // Track the mode here rather than reading data-theme, which lags behind
+    // while a view transition is still pending.
+    let current = saved || (prefersDark ? "dark" : "light");
+    apply(current);
 
     function apply(mode) {
       root.setAttribute("data-theme", mode);
@@ -45,10 +47,43 @@
     }
     if (btn) {
       btn.addEventListener("click", () => {
-        const next =
-          root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        const next = (current = current === "dark" ? "light" : "dark");
         localStorage.setItem("theme", next);
-        apply(next);
+        if (!document.startViewTransition || reduceMotion) {
+          apply(next);
+          return;
+        }
+        // Circular reveal expanding from the toggle button.
+        const r = btn.getBoundingClientRect();
+        const x = r.left + r.width / 2;
+        const y = r.top + r.height / 2;
+        const end = Math.hypot(
+          Math.max(x, innerWidth - x),
+          Math.max(y, innerHeight - y),
+        );
+        root.classList.add("no-trans");
+        const t = document.startViewTransition(() => apply(next));
+        // ready rejects if the browser skips the transition (e.g. hidden tab);
+        // the theme is still applied by the callback above.
+        t.ready.then(() =>
+          root.animate(
+            {
+              clipPath: [
+                `circle(0px at ${x}px ${y}px)`,
+                `circle(${end}px at ${x}px ${y}px)`,
+              ],
+            },
+            {
+              duration: 650,
+              easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+              pseudoElement: "::view-transition-new(root)",
+            },
+          ),
+        )
+          .catch(() => {});
+        t.finished
+          .finally(() => root.classList.remove("no-trans"))
+          .catch(() => {});
       });
     }
   })();
