@@ -50,7 +50,8 @@ open-source projects. Designed with a modern Meelo-inspired layout, a full
 ├── asset/
 │   ├── css/style.css     # All styles, light + dark themes
 │   ├── js/script.js      # All behaviour
-│   └── img/              # Profile photos & banner
+│   └── img/              # Photos, logos (KS current, KRISSCODE previous), favicon
+│       └── brand/        # Original KS logo source files (light/dark, horizontal/stacked)
 ├── CNAME                 # Custom domain → krisscode.dev
 └── README.md
 ```
