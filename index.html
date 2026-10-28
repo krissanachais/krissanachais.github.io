@@ -6,7 +6,7 @@
     <title>Krissanachai Sararam — Portfolio</title>
     <meta
       name="description"
-      content="Portfolio ของ Krissanachai Sararam นักวิชาการคอมพิวเตอร์ปฏิบัติการ สำนักงานสถิติแห่งชาติ — Full-Stack Web, Data & Statistics, LINE/Telegram API"
+      content="กฤษณชัย สาระรัมย์ นักวิชาการคอมพิวเตอร์ปฏิบัติการ สำนักงานสถิติแห่งชาติ พัฒนาเว็บแอป ระบบงานภาครัฐ และบอทแจ้งเตือนด้วย Python, TypeScript และ PHP"
     />
     <meta name="author" content="Krissanachai Sararam" />
 
@@ -14,23 +14,24 @@
          No inline scripts are allowed; inline style attributes only. -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://api.fontshare.com https://cdn.jsdelivr.net; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com https://cdn.fontshare.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
     />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <meta name="theme-color" content="#6c63ff" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
     <link rel="icon" href="./asset/img/favicon-ks.png" type="image/png" />
     <link rel="apple-touch-icon" href="./asset/img/favicon-ks.png" />
 
-    <!-- Open Graph -->
+    <!-- Open Graph / social -->
     <meta property="og:title" content="Krissanachai Sararam — Portfolio" />
     <meta
       property="og:description"
-      content="นักวิชาการคอมพิวเตอร์ปฏิบัติการ สำนักงานสถิติแห่งชาติ"
+      content="นักวิชาการคอมพิวเตอร์ปฏิบัติการ สำนักงานสถิติแห่งชาติ พัฒนาเว็บแอปและระบบงานภาครัฐ"
     />
-    <meta
-      property="og:image"
-      content="./asset/img/ChatGPT%20Image%20Apr%2023%2C%202026%2C%2008_43_20%20AM.png"
-    />
+    <meta property="og:image" content="https://krisscode.dev/asset/img/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="โลโก้ KS Krissanachai Sararam krisscode.dev" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://krisscode.dev/" />
     <link rel="canonical" href="https://krisscode.dev/" />
@@ -40,738 +41,758 @@
     <!-- Avoid dark-mode flash: apply saved theme before paint -->
     <script src="./asset/js/theme-init.js"></script>
 
-    <!-- Fonts -->
+    <!-- Fonts: Poppins for Latin, Prompt (same geometric style) for Thai glyphs -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Prompt:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Icons: Phosphor -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-      integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"
+      integrity="sha384-6p9AefaqUhEVheRlj1mpAkbngHXy9mbYMrIdcIt4Jlc9lOLIablJq3bBsLOjGwZ7"
       crossorigin="anonymous"
     />
 
-    <!-- Styles -->
     <link rel="stylesheet" href="./asset/css/style.css" />
   </head>
   <body>
-    <div id="scroll-progress"></div>
+    <a class="skip-link" href="#main">ข้ามไปยังเนื้อหา</a>
+    <div id="scroll-progress" aria-hidden="true"></div>
 
-    <!-- NAV -->
-    <nav>
-      <a class="nav-logo" href="#hero" aria-label="KrissCode.dev — home">
-        <img
-          class="logo-on-light"
-          src="./asset/img/logo-ks-h-light.png"
-          alt="Krissanachai Sararam — krisscode.dev"
-          width="1050"
-          height="320"
-        />
-        <img
-          class="logo-on-dark"
-          src="./asset/img/logo-ks-h-dark.png"
-          alt="Krissanachai Sararam — krisscode.dev"
-          width="1050"
-          height="320"
-        />
-      </a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#focus">Focus</a></li>
-        <li><a href="#git-work">Git Work</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="nav-right">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-          <i class="bi bi-moon-stars-fill"></i>
-        </button>
-        <a href="#contact" data-email class="nav-cta"
-          >Get in Touch</a
-        >
-        <button class="nav-ham" id="hamBtn" aria-label="Toggle menu">
-          <i class="bi bi-list"></i>
-        </button>
-      </div>
-    </nav>
-    <div class="mobile-nav" id="mobileNav">
+    <!-- NAV: floating pill -->
+    <header class="nav-wrap">
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a class="nav-logo" href="#hero" aria-label="Krissanachai Sararam หน้าแรก">
+          <img
+            class="logo-on-light"
+            src="./asset/img/logo-ks-h-light.png"
+            alt="Krissanachai Sararam — krisscode.dev"
+            width="1050"
+            height="320"
+          />
+          <img
+            class="logo-on-dark"
+            src="./asset/img/logo-ks-h-dark.png"
+            alt="Krissanachai Sararam — krisscode.dev"
+            width="1050"
+            height="320"
+          />
+        </a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#focus">Focus</a></li>
+          <li><a href="#git-work">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="สลับธีม">
+            <i class="ph ph-moon-stars" aria-hidden="true"></i>
+          </button>
+          <a href="#contact" class="nav-cta">ส่งข้อความ</a>
+          <button
+            class="nav-ham"
+            id="hamBtn"
+            type="button"
+            aria-label="เปิดเมนู"
+            aria-expanded="false"
+            aria-controls="mobileNav"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#focus">Focus</a>
-      <a href="#git-work">Git Work</a>
+      <a href="#git-work">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </div>
 
-    <!-- HERO -->
-    <section id="hero">
-      <canvas id="heroFx" class="hero-fx" aria-hidden="true"></canvas>
-      <div class="aurora" aria-hidden="true">
-        <span class="a1"></span><span class="a2"></span><span class="a3"></span>
-      </div>
-      <div class="hero-grid">
-        <div class="hero-left reveal">
-          <div class="status-pill">
-            <span class="status-dot"></span> พร้อมรับงานใหม่ · Open to work
-          </div>
-          <h1 class="hero-h1 split-lines">
-            <span class="line"><span class="line-in">Hi, I'm</span></span>
-            <span class="line"><span class="line-in hl">Krissanachai</span></span>
-            <span class="line"><span class="line-in">Sararam.</span></span>
-          </h1>
-          <div class="hero-role" id="heroRole">
-            นักวิชาการคอมพิวเตอร์ปฏิบัติการ<span class="caret"></span>
-          </div>
-          <p class="hero-desc">
-            นักวิชาการคอมพิวเตอร์ปฏิบัติการ สำนักงานสถิติแห่งชาติ
-            กระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม —
-            พัฒนาเว็บแอปพลิเคชัน วิเคราะห์ข้อมูลสถิติ
-            และเชื่อมต่อบริการผ่าน Python · TypeScript · PHP · LINE/Telegram API
-          </p>
-          <div class="hero-btns">
-            <a href="#contact" class="btn-dark">ติดต่อฉัน <i class="bi bi-arrow-right"></i></a>
-            <a
-              href="https://github.com/krissanachais"
-              target="_blank"
-              rel="noopener"
-              class="btn-ghost"
-              ><i class="bi bi-github"></i> GitHub</a
-            >
-          </div>
-        </div>
-        <div class="hero-photo reveal" data-reveal="scale" style="transition-delay: 0.12s">
-          <div class="hero-slideshow" id="heroSlideshow">
-            <div class="hs-slide active">
-              <img
-                src="./asset/img/20260421_034717396_iOS.jpg"
-                alt="Krissanachai Sararam"
-                width="280"
-                height="373"
-                fetchpriority="high"
-              />
+    <main id="main">
+      <!-- HERO -->
+      <section id="hero">
+        <canvas id="heroFx" class="hero-fx" aria-hidden="true"></canvas>
+        <div class="hero-grid">
+          <div class="hero-left reveal">
+            <div class="status-pill">
+              <span class="status-dot"></span> พร้อมรับงานใหม่ · Open to work
             </div>
-            <div class="hs-slide">
-              <img
-                src="./asset/img/20260421_034717392_iOS.jpg"
-                alt="Krissanachai Sararam"
-                width="280"
-                height="373"
-                loading="lazy"
-                decoding="async"
-              />
+            <h1 class="hero-h1 split-lines">
+              <span class="line"><span class="line-in">Hi, I'm</span></span>
+              <span class="line"><span class="line-in">Krissanachai</span></span>
+              <span class="line"><span class="line-in">Sararam.</span></span>
+            </h1>
+            <div class="hero-role" id="heroRole">
+              นักวิชาการคอมพิวเตอร์ปฏิบัติการ<span class="caret"></span>
             </div>
-            <div class="hs-slide">
-              <img
-                src="./asset/img/20260421_034717388_iOS.jpg"
-                alt="Krissanachai Sararam"
-                width="280"
-                height="373"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          </div>
-          <div class="slide-dots" id="slideDots">
-            <button class="slide-dot active" aria-label="Photo 1"></button>
-            <button class="slide-dot" aria-label="Photo 2"></button>
-            <button class="slide-dot" aria-label="Photo 3"></button>
-          </div>
-          <div class="float-card">
-            <div class="fc-icon"><i class="bi bi-building"></i></div>
-            <div>
-              <div class="fc-label">ทำงานที่</div>
-              <div class="fc-val">สถิติแห่งชาติ</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a href="#stats" class="scroll-cue" aria-label="เลื่อนลง"><span></span></a>
-    </section>
-
-    <!-- STATS -->
-    <section id="stats">
-      <div class="stats-grid">
-        <div class="stat reveal" data-reveal="blur">
-          <div class="stat-num" data-count="4" data-suffix="+">4+</div>
-          <div class="stat-label">ปีประสบการณ์ IT ภาครัฐ</div>
-        </div>
-        <div class="stat reveal" data-reveal="blur" style="transition-delay: 0.06s">
-          <div class="stat-num" data-count="3">3</div>
-          <div class="stat-label">หน่วยงานภาครัฐ</div>
-        </div>
-        <div class="stat reveal" data-reveal="blur" style="transition-delay: 0.12s">
-          <div class="stat-num" data-count="685" data-suffix="+">685+</div>
-          <div class="stat-label">Commits ต่อปี</div>
-        </div>
-        <div class="stat reveal" data-reveal="blur" style="transition-delay: 0.18s">
-          <div class="stat-num" data-count="12" data-suffix="+">12+</div>
-          <div class="stat-label">เทคโนโลยีหลัก</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="inner">
-        <div class="eyebrow">About me</div>
-        <div class="about-grid">
-          <div class="reveal" data-reveal="left">
-            <div class="about-photos" style="transition-delay: 0.05s">
-              <img
-                src="./asset/img/20260421_034717392_iOS.jpg"
-                alt="Krissanachai Sararam"
-                width="300"
-                height="400"
-                loading="lazy"
-                decoding="async"
-              />
-              <img
-                src="./asset/img/20240508_remini_iOSx300.png"
-                alt="Krissanachai Sararam"
-                width="200"
-                height="200"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          </div>
-          <div class="reveal" data-reveal="right" style="transition-delay: 0.1s">
-            <h2 class="about-title">
-              รู้จักกับ<br /><span class="accent">กฤษณชัย</span>
-            </h2>
-            <p class="about-body">
-              สวัสดีครับ ผม
-              <strong>กฤษณชัย สาระรัมย์</strong>
-              ทำงานในตำแหน่งนักวิชาการคอมพิวเตอร์ปฏิบัติการ ณ
-              สำนักงานสถิติแห่งชาติ กระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม
-              ผมหลงใหลในการพัฒนาซอฟต์แวร์ วิเคราะห์ข้อมูลสถิติ
-              และนำเทคโนโลยีดิจิทัลมาสร้างคุณค่าให้กับองค์กรภาครัฐ
+            <p class="hero-desc">
+              พัฒนาเว็บแอปและระบบงานให้สำนักงานสถิติแห่งชาติ
+              ตั้งแต่จองห้องประชุม สำรวจข้อมูล จนถึงบอทแจ้งเตือน
+              ด้วย Python, TypeScript, PHP และ LINE/Telegram API
             </p>
-            <p class="about-body">
-              ตลอดเส้นทางสายงานราชการด้าน IT ผมได้ออกแบบและพัฒนาระบบงานจริง
-              ทั้งเว็บแอปพลิเคชันภายใน ระบบจองคิว/ห้องประชุม ระบบสำรวจข้อมูล
-              และบอทแจ้งเตือนอัตโนมัติ โดยยึดหลัก "โค้ดที่ดูแลง่าย ปลอดภัย
-              และใช้งานได้จริง" เป็นหัวใจของทุกโปรเจกต์
-            </p>
-            <div class="info-pills">
-              <span class="pill pill-indigo"
-                ><i class="bi bi-geo-alt-fill"></i>&nbsp;กรุงเทพมหานคร</span
-              >
-              <span class="pill pill-green"
-                ><i class="bi bi-cpu-fill"></i>&nbsp;Computer Scientist</span
-              >
-              <span class="pill pill-blue"
-                ><i class="bi bi-building"></i>&nbsp;NSO Thailand</span
-              >
-              <span class="pill pill-yellow"
-                ><i class="bi bi-code-slash"></i>&nbsp;Python · JS · SQL</span
-              >
-              <span class="pill pill-teal"
-                ><i class="bi bi-graph-up-arrow"></i>&nbsp;685 commits /
-                year</span
-              >
-            </div>
-          </div>
-        </div>
-        <div class="reveal">
-          <img
-            class="about-banner"
-            src="./asset/img/ChatGPT%20Image%20Apr%2023%2C%202026%2C%2008_43_20%20AM.png"
-            alt="Krissanachai Sararam — NSO Banner"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-      <div class="inner">
-        <div class="skills-head">
-          <div>
-            <div class="eyebrow">Skills &amp; Tech</div>
-            <h2 class="big-title">
-              สิ่งที่ฉัน<br /><span class="accent">ทำได้</span>
-            </h2>
-          </div>
-          <p class="section-note">
-            เทคโนโลยีที่ใช้งานจริง<br />ในการทำงานทุกวัน
-          </p>
-        </div>
-
-        <div class="skill-group-label">Primary Skills</div>
-        <div class="skills-grid">
-          <div class="sc card-base primary reveal">
-            <div class="sc-icon ico-indigo">
-              <i class="bi bi-filetype-tsx"></i>
-            </div>
-            <div class="sc-name">TypeScript · Next.js · Node.js</div>
-            <div class="sc-desc">
-              พัฒนาเว็บแอปภายในองค์กร เช่น ระบบแจ้งเตือนอัตโนมัติ ระบบจองห้องประชุมออนไลน์
-              ระบบสำรวจข้อมูล และระบบบริหารงานบุคคล
-            </div>
-            <div class="sc-tags">
-              <span class="tag">TypeScript</span><span class="tag">Next.js</span
-              ><span class="tag">Node.js</span><span class="tag">npm</span>
-            </div>
-          </div>
-
-          <div class="sc card-base primary reveal" style="transition-delay: 0.06s">
-            <div class="sc-icon ico-green">
-              <i class="bi bi-filetype-php"></i>
-            </div>
-            <div class="sc-name">PHP · Laravel · Blade</div>
-            <div class="sc-desc">
-              พัฒนาบริการเว็บและ backend ด้วย PHP เช่น ระบบย่อลิงก์ ระบบเผยแพร่ข้อมูล
-              และเว็บไซต์กิจกรรมขององค์กร
-            </div>
-            <div class="sc-tags">
-              <span class="tag">PHP</span><span class="tag">Laravel</span
-              ><span class="tag">Blade</span><span class="tag">MVC</span>
-            </div>
-          </div>
-
-          <div class="sc card-base primary gov reveal" style="transition-delay: 0.12s">
-            <div class="sc-icon ico-blue">
-              <i class="bi bi-diagram-3-fill"></i>
-            </div>
-            <div class="sc-name">Government Systems</div>
-            <div class="sc-desc">
-              ออกแบบและพัฒนาระบบงานภาครัฐสำหรับ NSO เช่น CRM, Booking, Survey,
-              HRMS และระบบแจ้งเตือนภายในหน่วยงาน
-            </div>
-            <div class="sc-tags">
-              <span class="tag">e-Government</span
-              ><span class="tag">NSO Workflow</span
-              ><span class="tag">Internal Apps</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-group-label" style="margin-top: 1.3rem">
-          Secondary Skills
-        </div>
-        <div class="skills-grid secondary">
-          <div class="sc card-base reveal">
-            <div class="sc-icon ico-teal">
-              <i class="bi bi-chat-dots-fill"></i>
-            </div>
-            <div class="sc-name">API Integration · Bot Platform</div>
-            <div class="sc-desc">
-              เชื่อมต่อบริการ LINE, Telegram และ Discord จากงานจริง เช่น
-              บอทแจ้งเตือนและระบบส่งข้อความอัตโนมัติ
-            </div>
-            <div class="sc-tags">
-              <span class="tag">LINE API</span
-              ><span class="tag">Telegram Bot</span
-              ><span class="tag">Discord.js</span>
-            </div>
-          </div>
-
-          <div class="sc card-base reveal" style="transition-delay: 0.06s">
-            <div class="sc-icon ico-blue">
-              <i class="bi bi-kanban"></i>
-            </div>
-            <div class="sc-name">Business Systems Development</div>
-            <div class="sc-desc">
-              พัฒนาระบบงานภายในองค์กร เช่น CRM, Booking, Survey, Repair, Timeout
-              และ HRMS workflow
-            </div>
-            <div class="sc-tags">
-              <span class="tag">CRM</span><span class="tag">Booking</span
-              ><span class="tag">Survey</span><span class="tag">HRMS</span>
-            </div>
-          </div>
-
-          <div class="sc card-base reveal" style="transition-delay: 0.12s">
-            <div class="sc-icon ico-yellow">
-              <i class="bi bi-database-fill"></i>
-            </div>
-            <div class="sc-name">SQL · Data Processing</div>
-            <div class="sc-desc">
-              ดูแลการจัดการข้อมูลและ query optimization รวมถึงงานค้นหาแบบ
-              wildcard และงานฐานข้อมูลเชิงระบบ
-            </div>
-            <div class="sc-tags">
-              <span class="tag">SQL</span><span class="tag">MySQL</span
-              ><span class="tag">Optimization</span>
-            </div>
-          </div>
-
-          <div class="sc card-base reveal" style="transition-delay: 0.18s">
-            <div class="sc-icon ico-pink">
-              <i class="bi bi-shield-check"></i>
-            </div>
-            <div class="sc-name">Security · CodeQL · CI/CD</div>
-            <div class="sc-desc">
-              ใช้ CodeQL และ GitHub Actions เพื่อยกระดับคุณภาพโค้ด และ security
-              workflow ในการพัฒนา
-            </div>
-            <div class="sc-tags">
-              <span class="tag">CodeQL</span><span class="tag">SAST</span
-              ><span class="tag">GitHub Actions</span
-              ><span class="tag">CI/CD</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- TECH MARQUEE -->
-        <div class="marquee reveal" aria-hidden="true">
-          <div class="marquee-track">
-            <span class="chip"><i class="bi bi-filetype-tsx"></i>TypeScript</span>
-            <span class="chip"><i class="bi bi-lightning-charge-fill"></i>Next.js</span>
-            <span class="chip"><i class="bi bi-hexagon-fill"></i>Node.js</span>
-            <span class="chip"><i class="bi bi-filetype-php"></i>PHP</span>
-            <span class="chip"><i class="bi bi-layers-fill"></i>Laravel</span>
-            <span class="chip"><i class="bi bi-filetype-py"></i>Python</span>
-            <span class="chip"><i class="bi bi-database-fill"></i>SQL</span>
-            <span class="chip"><i class="bi bi-chat-dots-fill"></i>LINE API</span>
-            <span class="chip"><i class="bi bi-telegram"></i>Telegram Bot</span>
-            <span class="chip"><i class="bi bi-discord"></i>Discord.js</span>
-            <span class="chip"><i class="bi bi-shield-check"></i>CodeQL</span>
-            <span class="chip"><i class="bi bi-git"></i>GitHub Actions</span>
-            <!-- duplicate for seamless loop -->
-            <span class="chip"><i class="bi bi-filetype-tsx"></i>TypeScript</span>
-            <span class="chip"><i class="bi bi-lightning-charge-fill"></i>Next.js</span>
-            <span class="chip"><i class="bi bi-hexagon-fill"></i>Node.js</span>
-            <span class="chip"><i class="bi bi-filetype-php"></i>PHP</span>
-            <span class="chip"><i class="bi bi-layers-fill"></i>Laravel</span>
-            <span class="chip"><i class="bi bi-filetype-py"></i>Python</span>
-            <span class="chip"><i class="bi bi-database-fill"></i>SQL</span>
-            <span class="chip"><i class="bi bi-chat-dots-fill"></i>LINE API</span>
-            <span class="chip"><i class="bi bi-telegram"></i>Telegram Bot</span>
-            <span class="chip"><i class="bi bi-discord"></i>Discord.js</span>
-            <span class="chip"><i class="bi bi-shield-check"></i>CodeQL</span>
-            <span class="chip"><i class="bi bi-git"></i>GitHub Actions</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOCUS / WHAT I DO -->
-    <section id="focus" class="section">
-      <div class="inner">
-        <div class="skills-head">
-          <div>
-            <div class="eyebrow">What I do</div>
-            <h2 class="big-title">
-              งานที่ฉัน<br /><span class="accent">โฟกัส</span>
-            </h2>
-          </div>
-          <p class="section-note">
-            สามด้านหลักที่ผมนำมา<br />ขับเคลื่อนงานในทุกวัน
-          </p>
-        </div>
-        <div class="focus-grid">
-          <article class="focus-card card-base reveal" data-reveal="scale">
-            <div class="focus-num">01</div>
-            <div class="focus-title">
-              <i class="bi bi-window-stack"></i>Web Application
-            </div>
-            <div class="focus-desc">
-              พัฒนาเว็บแอปภายในองค์กรแบบ full-stack ตั้งแต่ออกแบบ UI/UX,
-              เขียน API จนถึงการ deploy — ด้วย Next.js, Node.js, Laravel
-              และ Blade ให้ใช้งานได้จริงและดูแลต่อง่าย
-            </div>
-          </article>
-          <article class="focus-card card-base reveal" data-reveal="scale" style="transition-delay: 0.07s">
-            <div class="focus-num">02</div>
-            <div class="focus-title">
-              <i class="bi bi-bar-chart-line-fill"></i>Data &amp; Statistics
-            </div>
-            <div class="focus-desc">
-              จัดการและวิเคราะห์ข้อมูลสถิติด้วย Python และ SQL
-              เน้น query optimization และการเผยแพร่ข้อมูลภาครัฐ
-              เพื่อสนับสนุนองค์กรแบบ Data-Driven
-            </div>
-          </article>
-          <article class="focus-card card-base reveal" data-reveal="scale" style="transition-delay: 0.14s">
-            <div class="focus-num">03</div>
-            <div class="focus-title">
-              <i class="bi bi-robot"></i>Automation &amp; Bots
-            </div>
-            <div class="focus-desc">
-              สร้างระบบแจ้งเตือนและ automation ที่เชื่อมต่อ LINE, Telegram
-              และ Discord ลดงานซ้ำซ้อน และทำให้ workflow ภายในหน่วยงาน
-              ทำงานได้อัตโนมัติ
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- GIT WORK -->
-    <section id="git-work" class="section">
-      <div class="inner">
-        <div class="skills-head">
-          <div>
-            <div class="eyebrow">Git Projects</div>
-            <h2 class="big-title">
-              งานอื่นของฉัน<br /><span class="accent">บน GitHub</span>
-            </h2>
-          </div>
-          <p class="section-note">
-            สรุปจากโปรไฟล์ GitHub จริง<br />ทั้งงาน public และ private
-          </p>
-        </div>
-
-        <div class="git-grid">
-          <article class="git-card gh-profile card-base reveal">
-            <div class="git-top">
-              <h3 class="git-name"><i class="bi bi-github"></i> @krissanachais</h3>
-              <a
-                class="git-link"
-                href="https://github.com/krissanachais"
-                target="_blank"
-                rel="noopener"
-                aria-label="Open GitHub profile"
-                ><i class="bi bi-box-arrow-up-right"></i
+            <div class="hero-btns">
+              <a href="#contact" class="btn-primary"
+                >ส่งข้อความหาผม <i class="ph ph-arrow-right" aria-hidden="true"></i
               ></a>
             </div>
-            <p class="git-desc">
-              Krissanachai Sararam · National Statistical Office, Thailand ·
-              <i class="bi bi-geo-alt"></i> Bangkok — โปรไฟล์หลักสำหรับงาน
-              open-source และเว็บไซต์ส่วนตัว
+            <p class="hero-proof">
+              <i class="ph ph-buildings" aria-hidden="true"></i>
+              ประสบการณ์ 4 ปีใน 3 หน่วยงานภาครัฐ
             </p>
-            <div class="gh-stats">
-              <div class="gh-stat">
-                <span class="gh-n">1</span><span class="gh-l">Public repos</span>
+          </div>
+          <div class="hero-photo reveal" style="transition-delay: 0.12s">
+            <div class="hero-slideshow" id="heroSlideshow">
+              <div class="hs-slide active">
+                <img
+                  src="./asset/img/20260421_034717396_iOS.jpg"
+                  alt="กฤษณชัย สาระรัมย์"
+                  width="280"
+                  height="373"
+                  fetchpriority="high"
+                />
               </div>
-              <div class="gh-stat">
-                <span class="gh-n">3</span><span class="gh-l">Followers</span>
+              <div class="hs-slide">
+                <img
+                  src="./asset/img/20260421_034717392_iOS.jpg"
+                  alt="กฤษณชัย สาระรัมย์"
+                  width="280"
+                  height="373"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <div class="gh-stat">
-                <span class="gh-n">2025</span><span class="gh-l">Member since</span>
+              <div class="hs-slide">
+                <img
+                  src="./asset/img/20260421_034717388_iOS.jpg"
+                  alt="กฤษณชัย สาระรัมย์"
+                  width="280"
+                  height="373"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
-          </article>
-
-          <article class="git-card card-base reveal" style="transition-delay: 0.07s">
-            <div class="git-top">
-              <h3 class="git-name">krissanachais.github.io</h3>
-              <a
-                class="git-link"
-                href="https://github.com/krissanachais/krissanachais.github.io"
-                target="_blank"
-                rel="noopener"
-                aria-label="Open repository"
-                ><i class="bi bi-box-arrow-up-right"></i
-              ></a>
+            <div class="slide-dots" id="slideDots">
+              <button class="slide-dot active" type="button" aria-label="รูปที่ 1"></button>
+              <button class="slide-dot" type="button" aria-label="รูปที่ 2"></button>
+              <button class="slide-dot" type="button" aria-label="รูปที่ 3"></button>
             </div>
-            <p class="git-desc">
-              เว็บไซต์โปรไฟล์ส่วนตัว โฮสต์ด้วย GitHub Pages — ออกแบบ UI/UX
-              ด้วย HTML, CSS และ Vanilla JavaScript รองรับ dark mode
-              และ responsive เต็มรูปแบบ
-            </p>
-            <div class="git-meta">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">GitHub Pages</span>
+            <div class="float-card">
+              <div class="fc-icon"><i class="ph ph-buildings" aria-hidden="true"></i></div>
+              <div>
+                <div class="fc-label">ทำงานที่</div>
+                <div class="fc-val">สถิติแห่งชาติ</div>
+              </div>
             </div>
-          </article>
-
-          <article class="git-card card-base reveal" style="transition-delay: 0.14s">
-            <div class="git-top">
-              <h3 class="git-name">Private NSO Projects</h3>
-              <a
-                class="git-link"
-                href="https://github.com/krissanachais"
-                target="_blank"
-                rel="noopener"
-                aria-label="Open GitHub profile"
-                ><i class="bi bi-lock-fill"></i
-              ></a>
-            </div>
-            <p class="git-desc">
-              งานที่พัฒนาและใช้งานจริงภายในหน่วยงาน (private) ได้แก่ ระบบ CRM,
-              ระบบแจ้งซ่อม, ระบบจองห้องประชุม, ระบบสำรวจข้อมูล, บอทแจ้งเตือน,
-              ระบบย่อลิงก์ และแบบฟอร์มออนไลน์
-            </p>
-            <div class="git-meta">
-              <span class="tag">TypeScript</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">PHP / Blade</span>
-              <span class="tag">Internal Systems</span>
-            </div>
-          </article>
+          </div>
         </div>
-      </div>
-    </section>
+        <a href="#stats" class="scroll-cue" aria-label="เลื่อนลง"><span></span></a>
+      </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section">
-      <div class="inner">
-        <div class="eyebrow">Experience</div>
-        <h2 class="big-title" style="margin-bottom: 0">
-          ประสบการณ์<br /><span class="accent">การทำงาน</span>
-        </h2>
-        <div class="exp-list">
-          <div class="exp-row reveal">
-            <div class="exp-period">
-              2567 - ปัจจุบัน<br /><span class="badge">ปัจจุบัน</span>
-            </div>
-            <div class="exp-main">
-              <div class="exp-role">นักวิชาการคอมพิวเตอร์ปฏิบัติการ</div>
-              <div class="exp-org">
-                สำนักงานสถิติแห่งชาติ · กระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม
-              </div>
-              <div class="exp-desc">
-                ดูแลและพัฒนาระบบสารสนเทศ วิเคราะห์ข้อมูลสถิติ
-                พัฒนาเว็บแอปพลิเคชันเพื่อเผยแพร่ข้อมูล และขับเคลื่อน
-                e-Government และ Data-Driven Organization ภายในองค์กร
-                รวมถึงระบบ CRM, Booking, Survey, HRMS และบอทแจ้งเตือนอัตโนมัติ
-              </div>
-              <div class="exp-tags">
-                <span class="tag">Next.js</span><span class="tag">Node.js</span
-                ><span class="tag">PHP</span><span class="tag">Python</span
-                ><span class="tag">LINE / Telegram API</span>
-              </div>
-            </div>
+      <!-- STATS -->
+      <section id="stats" aria-label="ตัวเลขสรุป">
+        <div class="stats-grid">
+          <div class="stat reveal">
+            <div class="stat-num" data-count="4" data-suffix="+">4+</div>
+            <div class="stat-label">ปีประสบการณ์ IT ภาครัฐ</div>
           </div>
+          <div class="stat reveal" style="transition-delay: 0.06s">
+            <div class="stat-num" data-count="3">3</div>
+            <div class="stat-label">หน่วยงานภาครัฐ</div>
+          </div>
+          <div class="stat reveal" style="transition-delay: 0.12s">
+            <div class="stat-num" data-count="685" data-suffix="+">685+</div>
+            <div class="stat-label">Commits ต่อปี</div>
+          </div>
+          <div class="stat reveal" style="transition-delay: 0.18s">
+            <div class="stat-num" data-count="12" data-suffix="+">12+</div>
+            <div class="stat-label">เทคโนโลยีหลัก</div>
+          </div>
+        </div>
+      </section>
 
-          <div class="exp-row reveal">
-            <div class="exp-period">2566 - 2567</div>
-            <div class="exp-main">
-              <div class="exp-role">นักวิชาการคอมพิวเตอร์ปฏิบัติการ</div>
-              <div class="exp-org">กรมประมง · กระทรวงเกษตรและสหกรณ์</div>
-              <div class="exp-desc">
-                ดูแลและพัฒนาระบบสารสนเทศ พัฒนาเว็บแอปพลิเคชันเพื่อเผยแพร่ข้อมูล
-                และสนับสนุนงานด้านเทคโนโลยีสารสนเทศของหน่วยงาน
-              </div>
-              <div class="exp-tags">
-                <span class="tag">Web App</span><span class="tag">IT Support</span
-                ><span class="tag">Data</span>
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="inner">
+          <div class="eyebrow">About me</div>
+          <div class="about-grid">
+            <div class="reveal">
+              <div class="about-photos">
+                <img
+                  src="./asset/img/20260421_034717392_iOS.jpg"
+                  alt="กฤษณชัย สาระรัมย์"
+                  width="300"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  src="./asset/img/20240508_remini_iOSx300.png"
+                  alt="กฤษณชัย สาระรัมย์ในชุดข้าราชการ"
+                  width="200"
+                  height="200"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
-          </div>
-
-          <div class="exp-row reveal">
-            <div class="exp-period">2565 - 2566</div>
-            <div class="exp-main">
-              <div class="exp-role">นักวิชาการคอมพิวเตอร์</div>
-              <div class="exp-org">
-                กองทุนพัฒนาดิจิทัลเพื่อเศรษฐกิจและสังคม ·
-                สำนักงานคณะกรรมการดิจิทัลเพื่อเศรษฐกิจและสังคมแห่งชาติ ·
+            <div class="reveal" style="transition-delay: 0.1s">
+              <h2 class="about-title">
+                รู้จักกับ<br /><span class="accent">กฤษณชัย</span>
+              </h2>
+              <p class="about-body">
+                สวัสดีครับ ผม
+                <strong>กฤษณชัย สาระรัมย์</strong>
+                นักวิชาการคอมพิวเตอร์ปฏิบัติการ สำนักงานสถิติแห่งชาติ
                 กระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม
-              </div>
-              <div class="exp-desc">
-                ดูแลและพัฒนาระบบสารสนเทศ
-                สนับสนุนงานด้านดิจิทัลและระบบภายในองค์กร
-              </div>
-              <div class="exp-tags">
-                <span class="tag">Information System</span
-                ><span class="tag">Digital</span>
+                ผมชอบพัฒนาซอฟต์แวร์ วิเคราะห์ข้อมูลสถิติ
+                และนำเทคโนโลยีมาแก้ปัญหาของหน่วยงานภาครัฐ
+              </p>
+              <p class="about-body">
+                ตลอดสายงาน IT ภาครัฐ ผมออกแบบและพัฒนาระบบที่ใช้งานจริง
+                ทั้งเว็บแอปภายใน ระบบจองคิวและห้องประชุม ระบบสำรวจข้อมูล
+                และบอทแจ้งเตือนอัตโนมัติ โดยยึดหลักว่าโค้ดต้องดูแลง่าย ปลอดภัย
+                และใช้งานได้จริง
+              </p>
+              <div class="info-pills">
+                <span class="pill pill-indigo"
+                  ><i class="ph ph-map-pin" aria-hidden="true"></i>กรุงเทพมหานคร</span
+                >
+                <span class="pill pill-green"
+                  ><i class="ph ph-cpu" aria-hidden="true"></i>Computer scientist</span
+                >
+                <span class="pill pill-blue"
+                  ><i class="ph ph-buildings" aria-hidden="true"></i>NSO Thailand</span
+                >
+                <span class="pill pill-yellow"
+                  ><i class="ph ph-code" aria-hidden="true"></i>Python · JS · SQL</span
+                >
+                <span class="pill pill-teal"
+                  ><i class="ph ph-trend-up" aria-hidden="true"></i>685 commits ต่อปี</span
+                >
               </div>
             </div>
           </div>
+          <div class="reveal">
+            <img
+              class="about-banner"
+              src="./asset/img/ChatGPT%20Image%20Apr%2023%2C%202026%2C%2008_43_20%20AM.png"
+              alt="แบนเนอร์ กฤษณชัย สาระรัมย์ สำนักงานสถิติแห่งชาติ"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="inner">
-        <div class="eyebrow">Contact</div>
-        <div class="contact-grid">
-          <div class="reveal" data-reveal="left">
-            <h2 class="contact-title">
-              มีโปรเจกต์<br />ในใจ?<br /><span class="accent">คุยกันเลย</span>
-            </h2>
-            <p class="contact-desc">
-              ยินดีพูดคุยทุกเรื่องที่เกี่ยวกับ Data, Web Technology, LINE API
-              หรือความร่วมมือด้านดิจิทัล
-            </p>
-            <div class="contact-links">
-              <a href="#contact" data-email class="c-row">
-                <div class="c-row-left">
-                  <div class="ci ci-email">
-                    <i class="bi bi-envelope-fill"></i>
+      <!-- SKILLS -->
+      <section id="skills" class="section">
+        <div class="inner">
+          <div class="skills-head">
+            <div>
+              <div class="eyebrow">Skills &amp; tech</div>
+              <h2 class="big-title">
+                สิ่งที่ผม<br /><span class="accent">ทำได้</span>
+              </h2>
+            </div>
+            <p class="section-note">เทคโนโลยีที่ใช้งานจริง<br />ในงานทุกวัน</p>
+          </div>
+
+          <div class="skill-group-label">Primary skills</div>
+          <div class="skills-grid">
+            <div class="sc card-base primary reveal">
+              <div class="sc-icon ico-indigo">
+                <i class="ph ph-file-ts" aria-hidden="true"></i>
+              </div>
+              <h3 class="sc-name">TypeScript · Next.js · Node.js</h3>
+              <p class="sc-desc">
+                พัฒนาเว็บแอปภายในองค์กร เช่น ระบบแจ้งเตือนอัตโนมัติ
+                ระบบจองห้องประชุมออนไลน์ ระบบสำรวจข้อมูล และระบบบริหารงานบุคคล
+              </p>
+              <div class="sc-tags">
+                <span class="tag">TypeScript</span><span class="tag">Next.js</span
+                ><span class="tag">Node.js</span><span class="tag">npm</span>
+              </div>
+            </div>
+
+            <div class="sc card-base primary reveal" style="transition-delay: 0.06s">
+              <div class="sc-icon ico-green">
+                <i class="ph ph-file-code" aria-hidden="true"></i>
+              </div>
+              <h3 class="sc-name">PHP · Laravel · Blade</h3>
+              <p class="sc-desc">
+                พัฒนาบริการเว็บและ backend ด้วย PHP เช่น ระบบย่อลิงก์
+                ระบบเผยแพร่ข้อมูล และเว็บไซต์กิจกรรมขององค์กร
+              </p>
+              <div class="sc-tags">
+                <span class="tag">PHP</span><span class="tag">Laravel</span
+                ><span class="tag">Blade</span><span class="tag">MVC</span>
+              </div>
+            </div>
+
+            <div class="sc card-base primary reveal" style="transition-delay: 0.12s">
+              <div class="sc-icon ico-blue">
+                <i class="ph ph-tree-structure" aria-hidden="true"></i>
+              </div>
+              <h3 class="sc-name">Government systems</h3>
+              <p class="sc-desc">
+                ออกแบบและพัฒนาระบบงานภาครัฐสำหรับ NSO เช่น CRM, ระบบจอง,
+                ระบบสำรวจ, HRMS และระบบแจ้งเตือนภายในหน่วยงาน
+              </p>
+              <div class="sc-tags">
+                <span class="tag">Digital government</span
+                ><span class="tag">NSO workflow</span
+                ><span class="tag">Internal apps</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-group-label skill-group-label--second">Secondary skills</div>
+          <div class="skills-grid secondary">
+            <div class="sc card-base reveal">
+              <div class="sc-icon ico-teal">
+                <i class="ph ph-chats-circle" aria-hidden="true"></i>
+              </div>
+              <h3 class="sc-name">API integration · Bot platform</h3>
+              <p class="sc-desc">
+                เชื่อมต่อบริการ LINE, Telegram และ Discord จากงานจริง
+                เช่น บอทแจ้งเตือนและระบบส่งข้อความอัตโนมัติ
+              </p>
+              <div class="sc-tags">
+                <span class="tag">LINE API</span
+                ><span class="tag">Telegram bot</span
+                ><span class="tag">Discord.js</span>
+              </div>
+            </div>
+
+            <div class="sc card-base reveal" style="transition-delay: 0.06s">
+              <div class="sc-icon ico-blue">
+                <i class="ph ph-kanban" aria-hidden="true"></i>
+              </div>
+              <h3 class="sc-name">Business systems development</h3>
+              <p class="sc-desc">
+                พัฒนาระบบงานภายในองค์กร เช่น CRM, ระบบจอง, ระบบสำรวจ,
+                ระบบแจ้งซ่อม และงานบุคคล
+              </p>
+              <div class="sc-tags">
+                <span class="tag">CRM</span><span class="tag">Booking</span
+                ><span class="tag">Survey</span><span class="tag">HRMS</span>
+              </div>
+            </div>
+
+            <div class="sc card-base reveal" style="transition-delay: 0.12s">
+              <div class="sc-icon ico-yellow">
+                <i class="ph ph-database" aria-hidden="true"></i>
+              </div>
+              <h3 class="sc-name">SQL · Data processing</h3>
+              <p class="sc-desc">
+                จัดการข้อมูลและปรับ query ให้เร็วขึ้น รวมถึงงานค้นหาแบบ
+                wildcard และงานฐานข้อมูลของระบบ
+              </p>
+              <div class="sc-tags">
+                <span class="tag">SQL</span><span class="tag">MySQL</span
+                ><span class="tag">Optimization</span>
+              </div>
+            </div>
+
+            <div class="sc card-base reveal" style="transition-delay: 0.18s">
+              <div class="sc-icon ico-pink">
+                <i class="ph ph-shield-check" aria-hidden="true"></i>
+              </div>
+              <h3 class="sc-name">Security · CodeQL · CI/CD</h3>
+              <p class="sc-desc">
+                ใช้ CodeQL และ GitHub Actions ตรวจคุณภาพและความปลอดภัยของโค้ด
+                ทุกครั้งที่มีการแก้ไข
+              </p>
+              <div class="sc-tags">
+                <span class="tag">CodeQL</span><span class="tag">SAST</span
+                ><span class="tag">GitHub Actions</span
+                ><span class="tag">CI/CD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TECH MARQUEE -->
+          <div class="marquee reveal" aria-hidden="true">
+            <div class="marquee-track">
+              <span class="chip"><i class="ph ph-file-ts"></i>TypeScript</span>
+              <span class="chip"><i class="ph ph-lightning"></i>Next.js</span>
+              <span class="chip"><i class="ph ph-hexagon"></i>Node.js</span>
+              <span class="chip"><i class="ph ph-file-code"></i>PHP</span>
+              <span class="chip"><i class="ph ph-stack"></i>Laravel</span>
+              <span class="chip"><i class="ph ph-file-py"></i>Python</span>
+              <span class="chip"><i class="ph ph-database"></i>SQL</span>
+              <span class="chip"><i class="ph ph-chats-circle"></i>LINE API</span>
+              <span class="chip"><i class="ph ph-telegram-logo"></i>Telegram bot</span>
+              <span class="chip"><i class="ph ph-discord-logo"></i>Discord.js</span>
+              <span class="chip"><i class="ph ph-shield-check"></i>CodeQL</span>
+              <span class="chip"><i class="ph ph-git-branch"></i>GitHub Actions</span>
+              <!-- duplicate for seamless loop -->
+              <span class="chip"><i class="ph ph-file-ts"></i>TypeScript</span>
+              <span class="chip"><i class="ph ph-lightning"></i>Next.js</span>
+              <span class="chip"><i class="ph ph-hexagon"></i>Node.js</span>
+              <span class="chip"><i class="ph ph-file-code"></i>PHP</span>
+              <span class="chip"><i class="ph ph-stack"></i>Laravel</span>
+              <span class="chip"><i class="ph ph-file-py"></i>Python</span>
+              <span class="chip"><i class="ph ph-database"></i>SQL</span>
+              <span class="chip"><i class="ph ph-chats-circle"></i>LINE API</span>
+              <span class="chip"><i class="ph ph-telegram-logo"></i>Telegram bot</span>
+              <span class="chip"><i class="ph ph-discord-logo"></i>Discord.js</span>
+              <span class="chip"><i class="ph ph-shield-check"></i>CodeQL</span>
+              <span class="chip"><i class="ph ph-git-branch"></i>GitHub Actions</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOCUS / WHAT I DO -->
+      <section id="focus" class="section">
+        <div class="inner">
+          <div class="skills-head">
+            <div>
+              <div class="eyebrow">What I do</div>
+              <h2 class="big-title">
+                งานที่ผม<br /><span class="accent">โฟกัส</span>
+              </h2>
+            </div>
+            <p class="section-note">สามด้านหลักที่ผม<br />ทำอยู่ทุกวัน</p>
+          </div>
+          <div class="focus-grid">
+            <article class="focus-card card-base reveal">
+              <div class="focus-num">01</div>
+              <h3 class="focus-title">
+                <i class="ph ph-browsers" aria-hidden="true"></i>Web application
+              </h3>
+              <p class="focus-desc">
+                พัฒนาเว็บแอปภายในองค์กรครบทั้งหน้าบ้านและหลังบ้าน
+                ตั้งแต่ออกแบบหน้าจอ เขียน API จนถึงการ deploy
+                ด้วย Next.js, Node.js, Laravel และ Blade
+              </p>
+            </article>
+            <article class="focus-card card-base reveal" style="transition-delay: 0.07s">
+              <div class="focus-num">02</div>
+              <h3 class="focus-title">
+                <i class="ph ph-chart-bar" aria-hidden="true"></i>Data &amp; statistics
+              </h3>
+              <p class="focus-desc">
+                จัดการและวิเคราะห์ข้อมูลสถิติด้วย Python และ SQL
+                ปรับ query ให้เร็วขึ้น และเผยแพร่ข้อมูลภาครัฐ
+                ให้หน่วยงานตัดสินใจจากข้อมูลได้
+              </p>
+            </article>
+            <article class="focus-card card-base reveal" style="transition-delay: 0.14s">
+              <div class="focus-num">03</div>
+              <h3 class="focus-title">
+                <i class="ph ph-robot" aria-hidden="true"></i>Automation &amp; bots
+              </h3>
+              <p class="focus-desc">
+                สร้างระบบแจ้งเตือนอัตโนมัติผ่าน LINE, Telegram และ Discord
+                ลดงานที่ต้องทำซ้ำ และให้งานภายในหน่วยงานเดินต่อได้เอง
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAGLINE REVEAL -->
+      <section id="tagline" class="tagline" aria-label="สิ่งที่ผมทำ">
+        <p class="tagline-text" data-words>
+          ผมสร้างระบบที่เจ้าหน้าที่<br />ใช้งานจริงได้ทุกวัน
+        </p>
+      </section>
+
+      <!-- GIT WORK -->
+      <section id="git-work" class="section">
+        <div class="inner">
+          <div class="skills-head">
+            <div>
+              <div class="eyebrow">Projects</div>
+              <h2 class="big-title">
+                ผลงานของผม<br /><span class="accent">บน GitHub</span>
+              </h2>
+            </div>
+            <p class="section-note">สรุปจากโปรไฟล์ GitHub จริง<br />ทั้งงาน public และ private</p>
+          </div>
+
+          <div class="git-grid">
+            <article class="git-card gh-profile card-base reveal">
+              <div class="git-top">
+                <h3 class="git-name">
+                  <i class="ph ph-github-logo" aria-hidden="true"></i> @krissanachais
+                </h3>
+                <a
+                  class="git-link"
+                  href="https://github.com/krissanachais"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="เปิดโปรไฟล์ GitHub"
+                  ><i class="ph ph-arrow-square-out" aria-hidden="true"></i
+                ></a>
+              </div>
+              <p class="git-desc">
+                Krissanachai Sararam · National Statistical Office, Thailand ·
+                Bangkok โปรไฟล์หลักสำหรับงาน open source และเว็บไซต์ส่วนตัว
+              </p>
+              <div class="gh-stats">
+                <div class="gh-stat">
+                  <span class="gh-n">1</span><span class="gh-l">Public repos</span>
+                </div>
+                <div class="gh-stat">
+                  <span class="gh-n">3</span><span class="gh-l">Followers</span>
+                </div>
+                <div class="gh-stat">
+                  <span class="gh-n">2025</span><span class="gh-l">Member since</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="git-card card-base reveal" style="transition-delay: 0.07s">
+              <div class="git-top">
+                <h3 class="git-name">krissanachais.github.io</h3>
+                <a
+                  class="git-link"
+                  href="https://github.com/krissanachais/krissanachais.github.io"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="เปิด repository"
+                  ><i class="ph ph-arrow-square-out" aria-hidden="true"></i
+                ></a>
+              </div>
+              <p class="git-desc">
+                เว็บไซต์โปรไฟล์ส่วนตัวบน GitHub Pages เขียนด้วย HTML, CSS
+                และ JavaScript ล้วน รองรับธีมมืดและทุกขนาดหน้าจอ
+              </p>
+              <div class="git-meta">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">GitHub Pages</span>
+              </div>
+            </article>
+
+            <article class="git-card card-base reveal" style="transition-delay: 0.14s">
+              <div class="git-top">
+                <h3 class="git-name">Private NSO projects</h3>
+                <span class="git-lock" aria-label="Private"
+                  ><i class="ph ph-lock-simple" aria-hidden="true"></i
+                ></span>
+              </div>
+              <p class="git-desc">
+                งานที่พัฒนาและใช้งานจริงภายในหน่วยงาน ได้แก่ ระบบ CRM,
+                ระบบแจ้งซ่อม, ระบบจองห้องประชุม, ระบบสำรวจข้อมูล, บอทแจ้งเตือน,
+                ระบบย่อลิงก์ และแบบฟอร์มออนไลน์
+              </p>
+              <div class="git-meta">
+                <span class="tag">TypeScript</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">PHP / Blade</span>
+                <span class="tag">Internal systems</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section">
+        <div class="inner">
+          <div class="eyebrow">Experience</div>
+          <h2 class="big-title">
+            ประสบการณ์<br /><span class="accent">การทำงาน</span>
+          </h2>
+          <ol class="exp-list">
+            <li class="exp-row reveal">
+              <div class="exp-period">
+                2567 – ปัจจุบัน<br /><span class="badge">ตำแหน่งปัจจุบัน</span>
+              </div>
+              <div class="exp-main">
+                <h3 class="exp-role">นักวิชาการคอมพิวเตอร์ปฏิบัติการ</h3>
+                <div class="exp-org">
+                  สำนักงานสถิติแห่งชาติ · กระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม
+                </div>
+                <p class="exp-desc">
+                  ดูแลและพัฒนาระบบสารสนเทศ วิเคราะห์ข้อมูลสถิติ
+                  พัฒนาเว็บแอปเพื่อเผยแพร่ข้อมูล ขับเคลื่อนรัฐบาลดิจิทัล
+                  และการใช้ข้อมูลในองค์กร รวมถึงระบบ CRM ระบบจอง ระบบสำรวจ
+                  HRMS และบอทแจ้งเตือนอัตโนมัติ
+                </p>
+                <div class="exp-tags">
+                  <span class="tag">Next.js</span><span class="tag">Node.js</span
+                  ><span class="tag">PHP</span><span class="tag">Python</span
+                  ><span class="tag">LINE / Telegram API</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="exp-row reveal">
+              <div class="exp-period">2566 – 2567</div>
+              <div class="exp-main">
+                <h3 class="exp-role">นักวิชาการคอมพิวเตอร์ปฏิบัติการ</h3>
+                <div class="exp-org">กรมประมง · กระทรวงเกษตรและสหกรณ์</div>
+                <p class="exp-desc">
+                  ดูแลและพัฒนาระบบสารสนเทศ พัฒนาเว็บแอปเพื่อเผยแพร่ข้อมูล
+                  และสนับสนุนงานเทคโนโลยีสารสนเทศของหน่วยงาน
+                </p>
+                <div class="exp-tags">
+                  <span class="tag">Web app</span><span class="tag">IT support</span
+                  ><span class="tag">Data</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="exp-row reveal">
+              <div class="exp-period">2565 – 2566</div>
+              <div class="exp-main">
+                <h3 class="exp-role">นักวิชาการคอมพิวเตอร์</h3>
+                <div class="exp-org">
+                  กองทุนพัฒนาดิจิทัลเพื่อเศรษฐกิจและสังคม ·
+                  สำนักงานคณะกรรมการดิจิทัลเพื่อเศรษฐกิจและสังคมแห่งชาติ ·
+                  กระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม
+                </div>
+                <p class="exp-desc">
+                  ดูแลและพัฒนาระบบสารสนเทศ สนับสนุนงานดิจิทัลและระบบภายในองค์กร
+                </p>
+                <div class="exp-tags">
+                  <span class="tag">Information systems</span
+                  ><span class="tag">Digital</span>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="inner">
+          <div class="eyebrow">Contact</div>
+          <div class="contact-grid">
+            <div class="reveal">
+              <h2 class="contact-title">
+                มีโปรเจกต์ในใจ<br /><span class="accent">คุยกับผมได้เลย</span>
+              </h2>
+              <p class="contact-desc">
+                ยินดีคุยเรื่องข้อมูล เว็บ LINE API หรือความร่วมมือด้านดิจิทัล
+              </p>
+              <div class="contact-links">
+                <a href="#contact" data-email class="c-row">
+                  <div class="c-row-left">
+                    <div class="ci ci-email">
+                      <i class="ph ph-envelope-simple" aria-hidden="true"></i>
+                    </div>
+                    <span data-email-text>ส่งอีเมลหาผม</span>
                   </div>
-                  <span data-email-text>ส่งอีเมลหาผม</span>
+                  <i class="ph ph-arrow-right c-arr" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://github.com/krissanachais"
+                  target="_blank"
+                  rel="noopener"
+                  class="c-row"
+                >
+                  <div class="c-row-left">
+                    <div class="ci ci-github">
+                      <i class="ph ph-github-logo" aria-hidden="true"></i>
+                    </div>
+                    github.com/krissanachais
+                  </div>
+                  <i class="ph ph-arrow-right c-arr" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://t.me/krissanachai16"
+                  target="_blank"
+                  rel="noopener"
+                  class="c-row"
+                >
+                  <div class="c-row-left">
+                    <div class="ci ci-tg">
+                      <i class="ph ph-telegram-logo" aria-hidden="true"></i>
+                    </div>
+                    @krissanachai16
+                  </div>
+                  <i class="ph ph-arrow-right c-arr" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://x.com/MogItPure"
+                  target="_blank"
+                  rel="noopener"
+                  class="c-row"
+                >
+                  <div class="c-row-left">
+                    <div class="ci ci-x"><i class="ph ph-x-logo" aria-hidden="true"></i></div>
+                    @MogItPure
+                  </div>
+                  <i class="ph ph-arrow-right c-arr" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="reveal" style="transition-delay: 0.1s">
+              <form class="cform" id="contactForm" novalidate>
+                <div class="fg">
+                  <label for="cfName">ชื่อ</label>
+                  <input
+                    id="cfName"
+                    name="name"
+                    type="text"
+                    placeholder="ชื่อของคุณ"
+                    maxlength="100"
+                    autocomplete="name"
+                    required
+                    aria-describedby="cfNameErr"
+                  />
+                  <p class="field-err" id="cfNameErr" hidden></p>
                 </div>
-                <i class="bi bi-arrow-right c-arr"></i>
-              </a>
-              <a
-                href="https://github.com/krissanachais"
-                target="_blank"
-                rel="noopener"
-                class="c-row"
-              >
-                <div class="c-row-left">
-                  <div class="ci ci-github"><i class="bi bi-github"></i></div>
-                  github.com/krissanachais
+                <div class="fg">
+                  <label for="cfEmail">อีเมล</label>
+                  <input
+                    id="cfEmail"
+                    name="email"
+                    type="email"
+                    placeholder="name@example.com"
+                    maxlength="254"
+                    autocomplete="email"
+                    required
+                    aria-describedby="cfEmailErr"
+                  />
+                  <p class="field-err" id="cfEmailErr" hidden></p>
                 </div>
-                <i class="bi bi-arrow-right c-arr"></i>
-              </a>
-              <a
-                href="https://t.me/krissanachai16"
-                target="_blank"
-                rel="noopener"
-                class="c-row"
-              >
-                <div class="c-row-left">
-                  <div class="ci ci-tg"><i class="bi bi-telegram"></i></div>
-                  @krissanachai16
+                <div class="fg">
+                  <label for="cfMsg">ข้อความ</label>
+                  <textarea
+                    id="cfMsg"
+                    name="message"
+                    rows="5"
+                    maxlength="1500"
+                    placeholder="เล่าเรื่องโปรเจกต์หรือสิ่งที่คุณอยากคุย"
+                    required
+                    aria-describedby="cfMsgErr"
+                  ></textarea>
+                  <p class="field-err" id="cfMsgErr" hidden></p>
                 </div>
-                <i class="bi bi-arrow-right c-arr"></i>
-              </a>
-              <a
-                href="https://x.com/MogItPure"
-                target="_blank"
-                rel="noopener"
-                class="c-row"
-              >
-                <div class="c-row-left">
-                  <div class="ci ci-x"><i class="bi bi-twitter-x"></i></div>
-                  @MogItPure
-                </div>
-                <i class="bi bi-arrow-right c-arr"></i>
-              </a>
+                <button type="submit" class="btn-primary form-btn">
+                  ส่งข้อความหาผม <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>
+                </button>
+                <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+              </form>
             </div>
           </div>
-
-          <div class="reveal" data-reveal="right" style="transition-delay: 0.1s">
-            <form class="cform" id="contactForm">
-              <div class="fg">
-                <label>ชื่อ</label
-                ><input type="text" placeholder="ชื่อของคุณ" maxlength="100" required />
-              </div>
-              <div class="fg">
-                <label>อีเมล</label
-                ><input type="email" placeholder="email@example.com" maxlength="254" required />
-              </div>
-              <div class="fg">
-                <label>ข้อความ</label
-                ><textarea
-                  rows="5"
-                  maxlength="1500"
-                  placeholder="บอกเล่าเกี่ยวกับโปรเจกต์หรือสิ่งที่คุณสนใจ..."
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="form-btn">
-                ส่งข้อความ&nbsp;<i class="bi bi-send-fill"></i>
-              </button>
-            </form>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- FOOTER -->
     <footer>
       <div class="footer-inner">
-        <a class="f-logo" href="#hero" aria-label="KrissCode.dev">
+        <a class="f-logo" href="#hero" aria-label="Krissanachai Sararam หน้าแรก">
           <img
             class="logo-on-light"
             src="./asset/img/logo-ks-h-light.png"
@@ -789,45 +810,44 @@
             loading="lazy"
           />
         </a>
-        <div class="f-copy">© <span id="year">2026</span> · All rights reserved</div>
+        <div class="f-meta">
+          <span class="f-copy">© <span id="year">2026</span> Krissanachai Sararam</span>
+          <a class="f-link" href="./privacy.html">นโยบายความเป็นส่วนตัว</a>
+        </div>
         <div class="f-socials">
-          <a
-            href="#contact"
-            data-email
-            class="fsb"
-            title="Email"
-            ><i class="bi bi-envelope-fill"></i
+          <a href="#contact" data-email class="fsb" aria-label="อีเมล"
+            ><i class="ph ph-envelope-simple" aria-hidden="true"></i
           ></a>
           <a
             href="https://github.com/krissanachais"
             target="_blank"
             rel="noopener"
             class="fsb"
-            title="GitHub"
-            ><i class="bi bi-github"></i
+            aria-label="GitHub"
+            ><i class="ph ph-github-logo" aria-hidden="true"></i
           ></a>
           <a
             href="https://t.me/krissanachai16"
             target="_blank"
             rel="noopener"
             class="fsb"
-            title="Telegram"
-            ><i class="bi bi-telegram"></i
+            aria-label="Telegram"
+            ><i class="ph ph-telegram-logo" aria-hidden="true"></i
           ></a>
           <a
             href="https://x.com/MogItPure"
             target="_blank"
             rel="noopener"
             class="fsb"
-            title="X (Twitter)"
-            ><i class="bi bi-twitter-x"></i
+            aria-label="X"
+            ><i class="ph ph-x-logo" aria-hidden="true"></i
           ></a>
         </div>
       </div>
     </footer>
 
-    <button id="to-top" aria-label="Back to top">
-      <i class="bi bi-arrow-up"></i>
+    <button id="to-top" type="button" aria-label="กลับขึ้นด้านบน">
+      <i class="ph ph-arrow-up" aria-hidden="true"></i>
     </button>
 
     <script src="./asset/js/script.js"></script>

@@ -209,25 +209,22 @@
   (function parallax() {
     const hero = $("#hero");
     const photo = $("#heroSlideshow");
-    const aurora = $(".aurora");
     if (!hero || !photo || reduce || !fine) return;
     hero.addEventListener("pointermove", (e) => {
       const r = hero.getBoundingClientRect();
       const x = (e.clientX - r.left) / r.width - 0.5;
       const y = (e.clientY - r.top) / r.height - 0.5;
       photo.style.transform = `perspective(900px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) translate(${x * 12}px, ${y * 12}px)`;
-      if (aurora) aurora.style.transform = `translate(${-x * 36}px, ${-y * 36}px)`;
     });
     hero.addEventListener("pointerleave", () => {
       photo.style.transform = "";
-      if (aurora) aurora.style.transform = "";
     });
   })();
 
   /* ── MAGNETIC BUTTONS ── */
   (function magnetic() {
     if (reduce || !fine) return;
-    $$(".btn-dark, .btn-ghost, .nav-cta, .theme-toggle, .form-btn, .fsb, .git-link").forEach(
+    $$(".btn-primary, .nav-cta, .theme-toggle, .fsb, .git-link").forEach(
       (el) => {
         el.addEventListener("pointermove", (e) => {
           const r = el.getBoundingClientRect();
@@ -249,6 +246,7 @@
     const ring = document.createElement("div");
     dot.className = "cursor-dot";
     ring.className = "cursor-ring";
+    ring.appendChild(document.createElement("span"));
     document.body.append(dot, ring);
     let mx = -100,
       my = -100,
@@ -287,7 +285,7 @@
   /* ── CLICK RIPPLE ── */
   (function ripple() {
     if (reduce) return;
-    $$(".btn-dark, .btn-ghost, .nav-cta").forEach((el) =>
+    $$(".btn-primary, .nav-cta").forEach((el) =>
       el.addEventListener("pointerdown", (e) => {
         const r = el.getBoundingClientRect();
         const size = Math.max(r.width, r.height) * 2;
@@ -311,57 +309,54 @@
     on();
   })();
 
-  /* ── CONFETTI on successful form submit ── */
-  (function confettiOnSubmit() {
-    const form = $("#contactForm");
-    if (!form || reduce) return;
-    form.addEventListener("submit", () => {
-      const b = form.querySelector(".form-btn").getBoundingClientRect();
-      confetti(b.left + b.width / 2, b.top + b.height / 2);
-    });
-  })();
-
-  function confetti(x, y) {
-    const cv = document.createElement("canvas");
-    cv.className = "confetti";
-    document.body.appendChild(cv);
-    const ctx = cv.getContext("2d");
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    cv.width = innerWidth * dpr;
-    cv.height = innerHeight * dpr;
-    ctx.scale(dpr, dpr);
-    const colors = ["#6c63ff", "#a855f7", "#63d6ff", "#ff7a2a", "#2f7bd9", "#4caf2a"];
-    const parts = Array.from({ length: 140 }, () => ({
-      x,
-      y,
-      vx: (Math.random() - 0.5) * 14,
-      vy: -Math.random() * 13 - 4,
-      s: Math.random() * 6 + 4,
-      r: Math.random() * Math.PI * 2,
-      vr: (Math.random() - 0.5) * 0.35,
-      c: colors[(Math.random() * colors.length) | 0],
-    }));
-    const LIFE = 1900;
-    const t0 = performance.now();
-    (function frame(now) {
-      const t = now - t0;
-      ctx.clearRect(0, 0, innerWidth, innerHeight);
-      ctx.globalAlpha = Math.max(0, 1 - t / LIFE);
-      for (const p of parts) {
-        p.vx *= 0.99;
-        p.vy += 0.38;
-        p.x += p.vx;
-        p.y += p.vy;
-        p.r += p.vr;
-        ctx.save();
-        ctx.translate(p.x, p.y);
-        ctx.rotate(p.r);
-        ctx.fillStyle = p.c;
-        ctx.fillRect(-p.s / 2, -p.s / 4, p.s, p.s / 2);
-        ctx.restore();
+  /* ── TAGLINE: words light up one at a time on scroll (B11) ── */
+  (function tagline() {
+    const el = $("[data-words]");
+    if (!el) return;
+    // Thai has no spaces between words, so segment with Intl.Segmenter.
+    const seg =
+      "Segmenter" in Intl ? new Intl.Segmenter("th", { granularity: "word" }) : null;
+    const split = (text) =>
+      seg ? Array.from(seg.segment(text), (p) => p.segment) : text.split(/(\s+)/);
+    for (const node of Array.from(el.childNodes)) {
+      if (node.nodeType !== 3) continue;
+      const frag = document.createDocumentFragment();
+      for (const part of split(node.textContent)) {
+        if (!part.trim()) {
+          frag.appendChild(document.createTextNode(part.replace(/\s+/g, " ")));
+          continue;
+        }
+        const w = document.createElement("span");
+        w.className = "w";
+        w.textContent = part;
+        frag.appendChild(w);
       }
-      if (t < LIFE) requestAnimationFrame(frame);
-      else cv.remove();
-    })(t0);
-  }
+      node.replaceWith(frag);
+    }
+    const words = $$(".w", el);
+    if (reduce) {
+      words.forEach((w) => w.classList.add("on"));
+      return;
+    }
+    let lit = 0;
+    let queued = false;
+    function update() {
+      queued = false;
+      const r = el.getBoundingClientRect();
+      // Trigger line sits at 75% of the viewport height; words switch on
+      // in reading order as the paragraph moves up past it.
+      const p = (innerHeight * 0.75 - r.top) / (r.height + innerHeight * 0.25);
+      const target = Math.min(words.length, Math.max(0, Math.floor(p * words.length)));
+      while (lit < target) words[lit++].classList.add("on");
+      if (lit >= words.length) removeEventListener("scroll", onScroll);
+    }
+    function onScroll() {
+      if (!queued) {
+        queued = true;
+        requestAnimationFrame(update);
+      }
+    }
+    addEventListener("scroll", onScroll, { passive: true });
+    update();
+  })();
 })();
